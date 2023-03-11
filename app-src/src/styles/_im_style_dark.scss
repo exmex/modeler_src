@@ -1,0 +1,119 @@
+$app-window-color: #333;
+$main-area-color: #555;
+$message-color: #666;
+$footer-color: #fff;
+$text-color: #eee;
+$text-color-secondary: #ccc;
+$link-color: #3faaff;
+$dark-panel: #393939;
+$table-bg: transparent;
+$table-border: rgba(0, 0, 0, 0.3);
+$note-text-color: #fff;
+$pre-color: beige;
+$datatype-color: #ddd;
+$outline: #2196f3;
+$theme-color: #000;
+$theme-reverse-color: #fff;
+$svg-stroke: #ddd;
+$svg-fill: #585858;
+$svg-main: #585858;
+$sel-relation: #000;
+$relation-bg: rgba(0, 0, 0, 0.01);
+$sel-relation-bg: #3faaff;
+$embedded-bg: rgba(0, 0, 0, 0.15);
+$embedded-bg-tree: rgba(0, 0, 0, 0.06);
+$col-list: limegreen;
+$col-object: goldenrod;
+$col-multi: white;
+$col-referenced: #2196f3;
+$line-separator: #666;
+$dropdown-bg: #353535;
+$shadow: 0 0 15px 0 #111111;
+$link-hover-bg: #2196f3;
+$link-side-hover-bg: #222;
+$link-side-selected-bg: #333;
+$link-side-focused-bg: #282828;
+$cols-bg: #404040;
+$new-col-form: #393939;
+$new-col-form-shadow: 0 0 3px 0 #333;
+$splitter-bg: #333 !important;
+$full-page-bg: linear-gradient(45deg, #525252, #444444);
+$grid-row-bg: #333;
+$grid-row-hover-bg: #222;
+$box-text: #999;
+$icon: #ccc;
+$icon-hover: rgba(0, 0, 0, 0.2);
+$selected-li: #333;
+$panel-bg: #444;
+$cat-header: rgba(0, 0, 0, 0.3);
+$modal-bg: #444;
+$modal-content-bg: #444;
+$diagram-panel-tabs-bg: #444;
+$modal-header: #333;
+$gradient-full: linear-gradient(
+  90deg,
+  rgba(255, 255, 255, 0),
+  rgba(255, 255, 255, 0),
+  rgb(76, 175, 80),
+  palevioletred,
+  red,
+  orange,
+  #2196f3,
+  rgba(255, 255, 255, 0),
+  rgba(255, 255, 255, 0)
+);
+$modal-content-bg: #444;
+$cat-bg-border: #ddd;
+$tab-color: #ccc;
+$tab-bg: #ccc;
+$tab-color-hover: #fff;
+$scrollbar-thumb: #2d2d2d;
+$scrollbar-track: #585858;
+$scrollbar-div: #202020 #585858;
+$search-border: 0px solid #646464;
+$search-bg: #646464;
+$search-placeholer: #000;
+$input-bg: #646464;
+$input-bg-active: #2196f3;
+$input-color: #fff;
+$im-white: #fff;
+$btn-default-bg: #0267b7;
+$btn-default-hover-bg: #2196f3;
+$btn-secondary-bg: #555;
+$btn-secondary-hover-bg: #000;
+$btn-tertiary-bg: rgba(0,0,0,0.2);
+$btn-tertiary-hover-bg: #000;
+$btn-tertiary-hover-border: 1px solid rgba(0, 0, 0, 0.3);
+$back-shadow: #000;
+$switch-bg: #666;
+$switch-before: #ccc;
+$switch-focus: #ddd;
+$chk-bg: rgba(255, 255, 255, 0.3);
+$chk-hover: #ccc;
+$chk-checked: #2196f3;
+$chk-chk: #fff;
+$message-err: #ee6a6a;
+$message-text: #eee;
+$datatype: #ddd;
+$datatype-json: #999;
+$modal-cat-bg-border: hsla(0, 0%, 100%, 0.1);
+$placeholder: #ccc;
+$arrow: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' version='1.2' height='15px' width='15px'%3E%3Ctext x='0' y='13' fill='white'%3E%E2%96%BE%3C/text%3E%3C/svg%3E");
+$aside-bg: #444;
+$aside-toggle: #ccc;
+$diagram: #333;
+$schema-box: rgba(0,0,0,0.2);
+$schema-key: #ccc;
+$bg-condition: darkmagenta;
+$bg-one-of: url(oneOf-dark.svg);
+$bg-all-of: url(allOf-dark.svg);
+$bg-any-of: url(anyOf-dark.svg);
+$bg-not: url(not-dark.svg);
+$bg-if: url(if-dark.svg);
+$bg-then: url(then-dark.svg);
+$bg-else: url(else-dark.svg);
+$br-search-result: goldenrod;
+$bg-textarea-code:  rgba(0,0,0,0.1);
+$bg-spec: #333;
+$bg-condition-spec: #404040;
+$ghost-col: rgba(0,0,0,0.08);

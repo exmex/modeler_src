@@ -1,0 +1,27 @@
+{
+  "name": "al",
+  "version": "1.0.0",
+  "description": "Autolayout Library for Datensen Modeler",
+  "main": "dist/index",
+  "types": "dist/index",
+  "files": [
+    "dist/**/*"
+  ],
+  "dependencies": {
+    "common": "1.0.0",
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "typescript": "^4.6.2",
+    "wsrun": "^5.2.4",
+    "rimraf": "^3.0.2"
+  },
+  "resolutions": {
+    "common": "link:../common"
+  },
+  "author": {
+    "name": "Ideamerit"
+  },
+  "license": "SEE LICENSE IN LICENSE",
+  "private": true
+}

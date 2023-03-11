@@ -1,0 +1,19 @@
+{
+  "name": "node-ipc-socket",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "node-ipc-socket.cjs",
+  "module": "node-ipc-socket.js",
+  "exports": {
+    "import": "./node-ipc-socket.js",
+    "require": "./node-ipc-socket.cjs"
+  },
+  "devDependencies": {
+    "esbuild": "^0.12.28"
+  },
+  "author": {
+    "name": "Ideamerit"
+  },
+  "license": "SEE LICENSE IN LICENSE",
+  "private": true
+}

@@ -1,0 +1,16 @@
+.header-item {
+  margin: auto 15px;
+  padding: 10px auto;
+  font-size: 14px;
+}
+
+.header-item-spacer,
+.footer-item-spacer,
+.toolbar-item-spacer,
+.list-item-spacer {
+  margin-right: auto;
+}
+
+.toolbar-item-spacer {
+  display: none;
+}

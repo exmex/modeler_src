@@ -1,0 +1,138 @@
+.im-carousel {
+  width: auto; 
+  margin-right: 200px !important;
+  background: #222;
+  height: 380px;
+}
+
+.im-carousel .swiper-slide {
+  min-height: 350px;
+  width: 100%;
+  height: 100%;  
+  background: #222;
+}
+
+.im-slide {
+  margin: 20px 50px 40px 50px;
+  background: #232323;
+  background-size: cover;
+  height: 300px;
+  border: 1px solid #333;
+  background-size: cover !important;
+  padding: 10px 20px;
+  display: grid;
+  grid-template-columns: auto auto;
+  overflow: auto;
+  line-height: 140%;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.im-slide div:first-of-type {
+  padding-right: 20px;
+}
+
+.im-slide p {
+  font-size: 13px;
+  color: rgba(255,255,255,0.6);
+}
+
+.im-slide .im-highlighted-text {
+  color: white;
+  text-shadow: 0 0 2px #000;
+}
+
+.im-slide h1 {
+  font-size: 18px;
+  margin-top: 10px;
+  margin-bottom: 8px;
+  text-shadow: 0 0 2px #000;
+  color: #fff;
+}
+
+
+.im-img-tip {
+  max-width: 350px;
+  max-height: 250px;
+  height: auto;
+  width: auto;
+  border-radius: 3px;
+  box-shadow: 0 0 10px -5px #000;
+  margin-top: 10px;  
+}
+
+@media screen and (max-width: 1500px) {
+  .im-img-tip {
+    max-width: 200px;
+    max-height: 180px;
+  }
+  .im-slide {
+    grid-template-columns: 50% 50%;
+  }
+}
+
+.im-slide-bg1 {
+  background: url(slice1.svg) 0 0, rgba(0,0,0,0.1);
+
+}
+
+.im-slide-bg2 {
+  background: url(slice2.svg) 0 0, rgba(0,0,0,0.1);
+
+}
+
+.im-slide-bg3 {
+  background: url(slice3.svg) 0 0, rgba(0,0,0,0.1);
+
+}
+
+.im-slide-bg4 {
+  background: url(slice4.svg) 0 0, rgba(0,0,0,0.1);
+
+}
+
+.im-slide-bg5 {
+  background: url(slice5.svg) 0 0, rgba(0,0,0,0.1);
+
+}
+
+
+.im-slide-bg6 {
+  background: url(slice6.svg) 0 0, rgba(0,0,0,0.1);
+
+}
+
+.im-slide-bg7 {
+  background: url(slice7.svg) 0 0, rgba(0,0,0,0.1);
+
+}
+
+.im-slide-bg8 {
+  background: url(slice5.svg) 0 0, linear-gradient(20deg, purple, red, orange, #2196f3, blue);
+  background-size: cover;
+
+}
+
+
+
+.swiper-pagination-progressbar {
+  top: auto !important;
+  bottom: 0;
+}
+
+.im-carousel-wrapper {
+  height: 380px;
+}
+
+.im-info {
+  width: 180px;
+  display: block;
+  position:absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: #222;
+  padding-left: 20px;
+  padding-top: 30px;
+}
+

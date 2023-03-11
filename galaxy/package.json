@@ -1,0 +1,21 @@
+{
+  "name": "galaxy",
+  "version": "6.1.0",
+  "description": "Galaxy Modeler",
+  "author": "Ideamerit",
+  "license": "Commercial",
+  "private": true,
+  "dependencies": {
+    "common": "1.0.0",
+    "electron-app": "1.0.0",
+    "re": "1.0.0",
+    "re-graphql": "1.0.0"
+  },
+  "resolutions": {
+    "common": "link: ../common",
+    "app": "link: ../app",
+    "electron-app": "link: ../electron-app",
+    "re": "link: ../re",
+    "re-graphql": "link: ../re-graphql"
+  }
+}

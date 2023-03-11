@@ -1,0 +1,205 @@
+@keyframes toDark {
+  from {
+    background: transparent;
+  }
+
+  to {
+    background: rgba(0, 0, 0, 0.3);
+  }
+}
+
+@keyframes fromTop {
+  from {
+    height: 0vh;
+  }
+
+  to {
+    height: 80vh;
+  }
+}
+
+@keyframes fromRight {
+  from {
+    width: 0vw;
+  }
+
+  to {
+    width: 50vw;
+  }
+}
+
+@keyframes im-anim-expand {
+  from {
+    max-height: 0;
+  }
+
+  to {
+    max-height: 100vh;
+  }
+}
+
+@keyframes im-anim-collapse {
+  from {
+    max-height: 50vh;
+    opacity: 1;
+  }
+
+  to {
+    max-height: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes im-anim-grow {
+  from {
+    transform: scale(0, 0);
+  }
+
+  to {
+    transform: scale(1, 1);
+  }
+}
+
+@keyframes im-anim-shrink {
+  from {
+    transform: scale(1, 1);
+  }
+
+  to {
+    transform: scale(0, 0);
+  }
+}
+
+@keyframes im-anim-grow-right {
+  from {
+    transform: scale(0, 0);
+  }
+
+  to {
+    transform: scale(1, 1);
+  }
+}
+
+@keyframes opacityToFull {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes im-bg-diagram-sel {
+  from {
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+
+  to {
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.2);
+  }
+}
+
+@keyframes growSeq {
+  0% {
+    transform: scale(0, 0);
+  }
+
+  60% {
+    transform: scale(1.2, 1.2);
+  }
+
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+@keyframes rotateRight {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotateLeft {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes pulsate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(5deg);
+  }
+
+  50% {
+    transform: rotate(0deg);
+  }
+
+  75% {
+    transform: rotate(-5deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(90deg);
+  }
+}
+
+@keyframes im-anim-notification-show {
+  from {
+    bottom: -200px;
+  }
+
+  to {
+    bottom: 24px;
+  }
+}
+
+@keyframes im-anim-notification-hide {
+  from {
+    bottom: 24px;
+  }
+
+  to {
+    bottom: -200px;
+  }
+}
+
+@keyframes asideFromLeft {
+  from {
+    left: -100%;
+  }
+
+  to {
+    left: 0;
+  }
+}
+
+@keyframes asideFromRight {
+  from {
+    right: -100%;
+  }
+
+  to {
+    right: 0;
+  }
+}

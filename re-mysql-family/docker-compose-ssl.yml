@@ -1,0 +1,56 @@
+version: "3"
+services:
+  mysql8_ssl:
+    image: mysql:8.0
+    container_name: mysql8_ssl
+    command:
+      [
+        "mysqld",
+        "--character-set-server=utf8mb4",
+        "--collation-server=utf8mb4_general_ci",
+        "--bind-address=0.0.0.0",
+        "--require_secure_transport=ON",
+        "--default_authentication_plugin=mysql_native_password",
+        "--ssl-ca=/etc/certs/ca-cert.pem",
+        "--ssl-cert=/etc/certs/server-cert.pem",
+        "--ssl-key=/etc/certs/server-key.pem",
+      ]
+    ports:
+      - "1801:3306"
+    volumes:
+      - type: bind
+        source: ./docker-compose/ssl-certs/mysql-family
+        target: /etc/certs
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: "root"
+      MYSQL_ROOT_HOST: "%"
+  mariadb10_5_ssl:
+    image: mariadb:10.5
+    container_name: mariadb10_5_ssl
+    command:
+      [
+        "mysqld",
+        "--character-set-server=utf8mb4",
+        "--collation-server=utf8mb4_general_ci",
+        "--bind-address=0.0.0.0",
+        "--require_secure_transport=ON",
+        "--default_authentication_plugin=mysql_native_password",
+        "--ssl-ca=/etc/certs/ca-cert.pem",
+        "--ssl-cert=/etc/certs/server-cert.pem",
+        "--ssl-key=/etc/certs/server-key.pem",
+      ]
+    volumes:
+      - type: bind
+        source: ./docker-compose/ssl-certs/mysql-family
+        target: /etc/certs
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_ROOT_HOST=%
+    ports:
+      - 32005:3306
+networks:
+  default:
+    external: 
+      name: testnet 

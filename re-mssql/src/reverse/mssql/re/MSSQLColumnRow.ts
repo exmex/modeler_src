@@ -1,0 +1,45 @@
+import { QueryResultRow } from "./QueryResultRow";
+
+export interface MSSQLColumnRow extends QueryResultRow {
+  _schema: string;
+  _table: string;
+  _name: string;
+  _rawtype_schema: string;
+  _rawtype: string;
+  _param: string;
+  _defaultvalue: string;
+  _is_user_defined: string;
+  _collation_name: string;
+  _is_nullable: boolean;
+  _is_identity: number;
+  _identity_seed_value: number;
+  _identity_increment_value: number;
+  _is_ansi_padded: boolean;
+  _is_rowguidcol: boolean;
+  _is_computed: boolean;
+  _definition?: string;
+  _is_persisted: boolean;
+  _is_filestream: boolean;
+  _is_replicated: boolean;
+  _is_not_for_replication: boolean;
+  _is_non_sql_subscribed: boolean;
+  _is_merge_published: boolean;
+  _is_dts_replicated: boolean;
+  _is_xml_document: boolean;
+  _xml_collection_id: number;
+  _default_object_id: number;
+  _rule_object_id: number;
+  _is_sparse: boolean;
+  _is_column_set: boolean;
+  _generated_always_type: number;
+  _generated_always_type_desc: string;
+  _encryption_type: number;
+  _encryption_type_desc: string;
+  _encryption_algorithm_name: string;
+  _column_encryption_key_id: number;
+  _column_encryption_key_database_name: string;
+  _is_hidden: boolean;
+  _is_masked: boolean;
+  _graph_type: number;
+  _graph_type_desc: string;
+}

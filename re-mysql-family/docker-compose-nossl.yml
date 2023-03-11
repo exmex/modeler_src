@@ -1,0 +1,97 @@
+version: "3"
+services:
+  mysql5_7:
+    image: mysql:5.7
+    command: --default-authentication-plugin=mysql_native_password
+    container_name: mysql5_7
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_ROOT_HOST=%
+    ports:
+      - 1570:3306
+  mysql8:
+    image: mysql:8.0
+    container_name: mysql8
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_ROOT_HOST=%
+    ports:
+      - 1800:3306
+  mariadb5_5_40:
+    image: mariadb:5.5.40
+    container_name: mariadb5_5_40
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_ROOT_HOST=%
+    ports:
+      - 35540:3306
+  mariadb10_1:
+    image: mariadb:10.1.45
+    container_name: mariadb10_1
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_ROOT_HOST=%
+    ports:
+      - 31001:3306
+  mariadb10_2:
+    image: mariadb:10.2.32
+    container_name: mariadb10_2
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_ROOT_HOST=%
+    ports:
+      - 31002:3306
+  mariadb10_3:
+    image: mariadb:10.3.23
+    container_name: mariadb10_3
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_ROOT_HOST=%
+    ports:
+      - 31003:3306
+  mariadb10_4:
+    image: mariadb:10.4.21
+    container_name: mariadb10_4
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_ROOT_HOST=%
+    ports:
+      - 31004:3306
+  mariadb10_5:
+    image: mariadb:10.5
+    container_name: mariadb10_5
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_ROOT_HOST=%
+    ports:
+      - 31005:3306
+  mariadb10_6:
+    image: mariadb:10.6
+    container_name: mariadb10_6
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_ROOT_HOST=%
+    ports:
+      - 31006:3306
+  mariadb10_7:
+    image: mariadb:10.7
+    container_name: mariadb10_7
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_ROOT_HOST=%
+    ports:
+      - 31007:3306
+networks:
+  default:
+    external: 
+      name: testnet 

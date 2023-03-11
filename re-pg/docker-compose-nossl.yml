@@ -1,0 +1,86 @@
+version: "3"
+services:
+  pg95:
+    image: postgres:9.5-alpine
+    container_name: pg95
+    restart: always
+    environment:
+      - POSTGRES_PASSWORD=test
+    ports:
+      - 4095:5432
+  pg96:
+    image: postgres:9.6-alpine
+    container_name: pg96
+    restart: always
+    environment:
+      - POSTGRES_PASSWORD=test
+    ports:
+      - 4096:5432
+  pg10:
+    image: postgres:10-alpine
+    container_name: pg100
+    restart: always
+    environment:
+      - POSTGRES_PASSWORD=test
+    ports:
+      - 4100:5432
+  pg11:
+    image: postgres:11-alpine
+    container_name: pg110
+    restart: always
+    environment:
+      - POSTGRES_PASSWORD=test
+    ports:
+      - 4110:5432
+  pg12:
+    image: postgres:12-alpine
+    container_name: pg120
+    restart: always
+    environment:
+      - POSTGRES_PASSWORD=test
+    ports:
+      - 4120:5432
+  pg12postgis:
+    image: postgis/postgis:12-3.1-alpine
+    container_name: pg121postgis
+    restart: always
+    environment:
+      - POSTGRES_PASSWORD=test
+    ports:
+      - 4121:5432
+  pg13:
+    image: postgres:13-alpine
+    container_name: pg130
+    restart: always
+    environment:
+      - POSTGRES_PASSWORD=test
+    ports:
+      - 4130:5432
+  pg14:
+    image: postgres:14-alpine
+    container_name: pg140
+    restart: always
+    environment:
+      - POSTGRES_PASSWORD=test
+    ports:
+      - 4140:5432
+  pg15:
+    image: postgres:15-alpine
+    container_name: pg150
+    restart: always
+    environment:
+      - POSTGRES_PASSWORD=test
+    ports:
+      - 4150:5432
+  pg13postgis:
+    image: postgis/postgis:13-3.1-alpine
+    container_name: pg131postgis
+    restart: always
+    environment:
+      - POSTGRES_PASSWORD=test
+    ports:
+      - 4131:5432
+networks:
+  default:
+    external: 
+      name: testnet

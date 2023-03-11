@@ -1,0 +1,22 @@
+version: "3"
+services:
+  mongo:
+    image: mongo
+    container_name: mongo
+    restart: always
+    ports:
+      - 37017:27017
+  mongo-sha256:
+    image: mongo
+    container_name: mongo-sha256
+    restart: always
+    ports:
+      - 37018:27017
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=mongouser
+      - MONGO_INITDB_ROOT_PASSWORD=mongopass
+      - MONGO_INITDB_DATABASE=anotherdb
+networks:
+  default:
+    external: 
+      name: testnet 

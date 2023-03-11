@@ -1,0 +1,145 @@
+.im-cat-header {
+  background: $panel-bg;
+  border-top: 1px solid $cat-header;
+  display: flex;
+
+  font-size: 12px;
+
+  z-index: 5;
+  min-height: 24px;
+  user-select: none;
+  color: $theme-reverse-color;
+  text-shadow: 0 0 3px $theme-color;
+}
+
+.aside-left .im-cat-header {
+  /*border-top: 1px solid transparent;*/
+  background: $panel-bg;
+  min-height: 26px;
+}
+
+.im-cat-text {
+  margin-right: auto;
+  user-select: none;
+  align-self: center;
+  padding-bottom: 0px;
+  /*text-shadow: 0 0 1px #ccc;*/
+  font-size: 11px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.im-cat-icon {
+  min-width: 28px;
+  width: auto;
+  text-align: center;
+  align-self: center;
+  display: flex;
+}
+
+.im-cat-icon i {
+  margin: auto;
+}
+
+.im-detail-collapsed {
+  display: none;
+}
+
+.im-detail-expanded {
+  display: block;
+  padding-left: 16px;
+  border-left: 1px solid $table-border;
+  margin-left: 8px;
+  margin-top: 5px;
+  margin-bottom: 14px;
+
+  background: linear-gradient(#f9f9fa, #fff, #f9f9fa);
+  background: $panel-bg;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-right: 12px;
+}
+
+.im-detail-expander-block {
+  grid-column: span 10;
+  position: relative;
+}
+
+.im-detail-expander {
+  position: absolute;
+  top: -18px;
+  left: -5px;
+  display: block;
+}
+
+.im-collapsible-panel {
+  padding: 8px 8px;
+  font-size: 12px;
+  background: $panel-bg;
+  color: $text-color;
+}
+
+.im-collapsed {
+  overflow: hidden;
+}
+
+.im-expanded {
+  overflow: hidden;
+}
+
+.im-spec-wrapper {
+  margin-top: 12px;
+  grid-column: span 2;
+}
+
+.im-grid-right-icon {
+  display: grid;
+  grid-template-columns: 1fr 22px;
+  width: 100%;
+}
+
+.im-grid-right-icon i.im-icon-16 {
+  height: 18px;
+}
+
+.im-spec-editable-icon {
+  margin-left: 5px;
+  max-height: 18px;
+  border-radius: 2px;
+}
+
+.im-detail-spec-group {
+  font-weight: 700;
+  margin-top: 8px;
+}
+
+.im-detail-spec-group-hidden {
+  display: none;
+}
+
+.im-detail-spec-group-cap {
+  text-transform: capitalize;
+}
+
+.im-detail-spec-panel {
+  display: block;
+  padding-left: 10px;
+  border-left: 1px solid $table-border;
+  margin-left: 8px;
+  margin-top: 5px;
+  margin-bottom: 8px;
+  background: $panel-bg;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-right: 4px;
+}
+
+.im-normal {
+  transform: rotate(0deg);
+  transition: all 0.2s linear;
+}
+
+.im-rotate {
+  transform: rotate(-90deg);
+  transition: all 0.2s linear;
+}

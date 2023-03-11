@@ -1,0 +1,283 @@
+.react-tabs__tab-list {
+  border-bottom: 0px solid #ccc;
+  margin: 0;
+  padding: 3px 0 0 0;
+  padding-left: 4px;
+  /*text-align: center;*/
+  border: 0;
+}
+
+.react-tabs__tab {
+  display: inline-block;
+  border: 1px solid transparent;
+  border-bottom: none;
+  bottom: -2px;
+  position: relative;
+  list-style: none;
+  padding: 8px 10px 2px 10px;
+  cursor: pointer;
+  margin-left: 4px;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: $tab-color;
+  transition: 0.3s color;
+}
+
+.react-tabs__tab:after {
+  content: " ";
+  height: 2px;
+  width: 0;
+  display: block;
+  background: $tab-bg;
+  margin-top: 4px;
+  transition: width 0.3s;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.react-tabs__tab:hover {
+  color: $tab-color-hover;
+  transition: 0.3s color;
+}
+
+.react-tabs__tab:hover::after {
+  width: 100%;
+  transition: width 0.3s;
+}
+
+.react-tabs__tab--selected:after {
+  content: " ";
+  height: 2px;
+  width: 100%;
+  display: block;
+  background: #2196f3;
+  margin-top: 4px;
+}
+
+.react-tabs__tab--selected {
+  /*background: linear-gradient(#fff, #f9f9fa);*/
+  /*border-color: #aaa;*/
+  color: $text-color;
+
+  /*
+    border-top: 2px solid #2196F3;   
+    border-left: 1px solid #ccc;   
+    border-right: 1px solid #ccc;   
+    border-top-left-radius: 1px;
+    border-top-right-radius: 1px;
+    */
+}
+
+.react-tabs__tab--disabled {
+  color: GrayText;
+  cursor: default;
+}
+
+.react-tabs__tab:focus {
+  /*box-shadow: 0 0 5px hsl(208, 99%, 50%);
+  border-color: hsl(208, 99%, 50%);*/
+  outline: none;
+}
+
+.react-tabs__tab:focus:after {
+  content: " ";
+  height: 2px;
+  width: 100%;
+  display: block;
+  background: #2196f3;
+  margin-top: 4px;
+}
+
+.react-tabs__tab-panel {
+  display: none;
+}
+
+.react-tabs__tab-panel--selected {
+  display: block;
+  font-size: 12px;
+  height: 100%;
+}
+
+.im-tabs {
+  height: 100%;
+}
+
+.im-tabs-grid {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  height: 100%;
+}
+
+.im-tabs-grid-aside-left {
+  grid-template-rows: auto 1fr auto;
+}
+
+.im-aside-bottom-panel {
+  background: $modal-content-bg;
+  height: 20px;
+  font-size: 12px;
+  color: $text-color;
+  padding: 5px 4px 5px 6px;
+  text-align: left;
+  border-top: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.im-tabs-grid-diagram {
+  display: grid;
+  grid-template-areas: "diagram-tabs" "diagram-content";
+  grid-template-rows: 1fr auto;
+  height: 100%;
+  overflow: hidden;
+}
+
+.diagram-area-1 {
+  grid-area: diagram-tabs;
+}
+
+.diagram-area-2 {
+  grid-area: diagram-content;
+  overflow-x: hidden !important;
+}
+
+.im-tabs-grid-diagram-top {
+  display: grid;
+  grid-template-areas: "diagram-content" "diagram-tabs";
+  grid-template-rows: auto 1fr;
+  height: 100%;
+  overflow: hidden;
+}
+
+.im-tabs-diagram-area {
+  height: 100%;
+  overflow: auto;
+}
+
+.im-tabs-tablist {
+  min-height: 40px;
+  margin-bottom: 0px;
+  /*box-shadow: 0 0 3px 0 #999;*/
+  z-index: 1;
+  background: linear-gradient(#f5f5f5, #f9f9fa);
+  background: $modal-content-bg;
+
+  user-select: none;
+}
+
+.main-tabs .im-tabs-tablist {
+  background: rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.5);
+}
+
+.aside-left .im-tabs-tablist,
+.aside-right .im-tabs-tablist {
+  box-shadow: 0 0 0px 0 #000;
+}
+
+.im-tabs-area {
+  overflow: auto;
+  /*border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;*/
+  padding-bottom: 10px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  background: $modal-content-bg;
+}
+
+.im-tabs-grid-diagram .im-tabs-tablist,
+.im-tabs-grid-diagram-top .im-tabs-tablist {
+  white-space: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  background: $diagram-panel-tabs-bg;
+  min-height: 30px;
+}
+
+.im-tabs-with-fixed-panel {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 180px;
+  width: max-content;
+}
+
+.im-fixed-panel {
+  align-self: center;
+  padding-right: 5px;
+  background: linear-gradient(
+    transparent,
+    $diagram-panel-tabs-bg,
+    $diagram-panel-tabs-bg,
+    $diagram-panel-tabs-bg,
+    $diagram-panel-tabs-bg
+  );
+  position: absolute;
+  right: 0;
+  height: 24px;
+}
+
+.im-fixed-panel button {
+  margin-left: 4px;
+}
+
+.im-fixed-panel div {
+  display: inline-block;
+}
+
+.im-fixed-panel i {
+  color: $text-color;
+}
+
+.im-tabs-with-fixed-panel .react-tabs__tab {
+  display: inline-block;
+  border: 1px solid transparent;
+  border-bottom: none;
+  bottom: 3px;
+  position: relative;
+  list-style: none;
+  padding: 4px 8px 4px 8px;
+  cursor: pointer;
+  margin-left: 1px;
+  font-size: 11px;
+  text-transform: uppercase;
+  color: $tab-color;
+  transition: 0.3s color;
+  background: transparent;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.im-tabs-with-fixed-panel-top .react-tabs__tab {
+  bottom: 0;
+  top: 3px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.im-tabs-with-fixed-panel .react-tabs__tab:after {
+  display: none;
+}
+
+.im-tabs-with-fixed-panel .react-tabs__tab:hover {
+  color: $tab-color-hover;
+  transition: 0.3s color;
+}
+
+.im-tabs-with-fixed-panel .react-tabs__tab:hover::after {
+  display: none;
+}
+
+.im-tabs-with-fixed-panel .react-tabs__tab--selected:after {
+  display: none;
+}
+
+.im-tabs-with-fixed-panel .react-tabs__tab--selected {
+  color: $text-color;
+  background: $app-window-color;
+}
+
+/*
+.im-tab-panel {
+  overflow: auto;
+}
+*/

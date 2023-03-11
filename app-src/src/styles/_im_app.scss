@@ -1,0 +1,242 @@
+//@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&subset=latin-ext");
+
+/* open-sans-regular - latin-ext_latin */
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./../assets/open-sans-v17-latin-ext_latin-regular.eot"); /* IE9 Compat Modes */
+  src: local("Open Sans Regular"), local("OpenSans-Regular"),
+    url("./../assets/open-sans-v17-latin-ext_latin-regular.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("./../assets/open-sans-v17-latin-ext_latin-regular.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */
+      url("./../assets/open-sans-v17-latin-ext_latin-regular.woff")
+      format("woff"),
+    /* Modern Browsers */
+      url("./../assets/open-sans-v17-latin-ext_latin-regular.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("./../assets/open-sans-v17-latin-ext_latin-regular.svg#OpenSans")
+      format("svg"); /* Legacy iOS */
+}
+
+/* open-sans-600 - latin-ext_latin */
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  src: url("./../assets/open-sans-v17-latin-ext_latin-600.eot"); /* IE9 Compat Modes */
+  src: local("Open Sans SemiBold"), local("OpenSans-SemiBold"),
+    url("./../assets/open-sans-v17-latin-ext_latin-600.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("./../assets/open-sans-v17-latin-ext_latin-600.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */
+      url("./../assets/open-sans-v17-latin-ext_latin-600.woff") format("woff"),
+    /* Modern Browsers */
+      url("./../assets/open-sans-v17-latin-ext_latin-600.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("./../assets/open-sans-v17-latin-ext_latin-600.svg#OpenSans")
+      format("svg"); /* Legacy iOS */
+}
+
+/* open-sans-700 - latin-ext_latin */
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("./../assets/open-sans-v17-latin-ext_latin-700.eot"); /* IE9 Compat Modes */
+  src: local("Open Sans Bold"), local("OpenSans-Bold"),
+    url("./../assets/open-sans-v17-latin-ext_latin-700.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("./../assets/open-sans-v17-latin-ext_latin-700.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */
+      url("./../assets/open-sans-v17-latin-ext_latin-700.woff") format("woff"),
+    /* Modern Browsers */
+      url("./../assets/open-sans-v17-latin-ext_latin-700.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("./../assets/open-sans-v17-latin-ext_latin-700.svg#OpenSans")
+      format("svg"); /* Legacy iOS */
+}
+
+html,
+body,
+#root,
+.app-layout,
+.aside-left,
+.aside-right,
+.main-area,
+.diagram {
+  height: 100%;
+  width: 100%;
+}
+
+html {
+  overflow: hidden;
+}
+
+html,
+body,
+div,
+p,
+span,
+a,
+td,
+ul,
+li {
+  font-family: "Open Sans", "Exo";
+}
+
+pre,
+code,
+pre span,
+code span {
+  font-family: "Courier New", Courier, monospace;
+}
+
+.app-header {
+  min-height: 60px;
+  border-bottom: 1px solid #ccc;
+
+  z-index: 2;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.app-window {
+  position: relative;
+  background: $app-window-color;
+}
+
+.app-layout {
+  display: grid;
+  grid-template-rows: 55px 1fr 24px;
+  grid-template-columns: 1fr;
+  min-height: 300px;
+  min-width: 400px;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 1279px) {
+  .app-layout {
+    display: grid;
+    grid-template-rows: 71px 1fr 24px;
+    grid-template-columns: 1fr;
+    min-height: 300px;
+    min-width: 400px;
+    overflow: hidden;
+  }
+}
+
+.main-area {
+  overflow: auto;
+  background-size: 40px 40px;
+  background: $main-area-color;
+  /*background-image: radial-gradient(circle, #cccccc 1px, rgba(0, 0, 0, 0) 1px);*/
+  /*background-color: #f1f1f1;*/
+}
+
+.main-area .layout-splitter {
+  display: none;
+}
+
+.aside-left {
+  overflow: auto;
+  /*position: relative;
+  left: 0;
+  animation: asideFromLeft 500ms forwards;*/
+}
+
+.aside-nav {
+  padding: 0;
+}
+
+.aside-left,
+.aside-right,
+.t,
+.dGraphicsHeader,
+.dTableName {
+  user-select: none;
+  -webkit-user-select: none; /* Chrome all / Safari all */
+  -moz-user-select: none; /* Firefox all */
+  -ms-user-select: none; /* IE 10+ */
+}
+
+.aside-right {
+  min-width: 200px;
+  overflow: auto;
+  /*position: relative;
+  right: 0;
+  animation: asideFromRight 500ms forwards;*/
+}
+
+pre {
+  user-select: text;
+}
+
+.aside-right .im-collapsible-wrapper:first-child .im-cat-header,
+.aside-left .im-collapsible-wrapper:first-child .im-cat-header {
+  border-top: 0px;
+}
+
+.im-collapsible-wrapper-code{
+  display: grid;
+  grid-template-columns: 1fr;
+  height: 100%;
+  grid-template-rows: auto 1fr;
+}
+
+.aside-right-message {
+  text-align: center;
+  font-size: 14px;
+  color: $message-color;
+  padding-top: 30px;
+}
+
+.app-footer {
+  color: $footer-color;
+  display: flex;
+  grid-column: span 12;
+  font-size: 11px;
+  vertical-align: center;
+  z-index: 1001;
+
+  background: linear-gradient(
+    90deg,
+    rgb(76, 175, 80),
+    purple,
+    red,
+    orange,
+    #2196f3
+  );
+}
+
+.app-header {
+  display: flex;
+  grid-column: span 12;
+}
+
+@media print {
+.mm-freeware #mainHtmlCanvas div:nth-child(10n) .dCols::after, .mm-trial #mainHtmlCanvas div:nth-child(10n) .dCols::after{
+  content: "www.datensen.com";
+  display: inline-block;
+  position: absolute;
+  top: 23px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background: rgba(0,0,0,0.9);
+  color: white;
+  padding: 5px 5px 5px 5px;
+  text-align: center;
+}
+}
+

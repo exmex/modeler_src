@@ -1,0 +1,26 @@
+version: "3"
+services:
+  openssh-server:
+    build:
+      context: ./docker-compose/ssh
+    container_name: openssh-server2222
+    environment:
+      - SSH_USERS=test:1000:1000
+      - TCP_FORWARDING=true
+      - SSH_ENABLE_PASSWORD_AUTH=true
+    ports:
+      - "2222:22"
+  openssh-private-key-server:
+    build:
+      context: ./docker-compose/ssh-private-key
+    container_name: openssh-server3333
+    environment:
+      - SSH_USERS=root:0:0
+      - TCP_FORWARDING=true
+      - SSH_ENABLE_ROOT=true
+    ports:
+      - "3333:22"
+networks:
+  default:
+    external: 
+      name: testnet 

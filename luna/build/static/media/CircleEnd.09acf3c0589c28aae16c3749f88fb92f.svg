@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 12 12" version="1.1"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1;">
+    <rect id="CircleEnd" x="0" y="0.149" width="12" height="12" style="fill:none;"/>
+    <path d="M9,6.149l-6.75,0" style="fill:none;stroke:#000;stroke-width:0.75px;"/>
+    <path d="M9.375,2.399c-2.07,0.001 -3.75,1.681 -3.75,3.75c0,2.07 1.68,3.75 3.75,3.75l0,-7.5Z" style="stroke:#000;stroke-width:0.75px;stroke-linecap:round;stroke-miterlimit:2;"/>
+</svg>

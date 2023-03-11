@@ -1,0 +1,29 @@
+div::-webkit-scrollbar,
+textarea::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  margin-left: 5px;
+}
+
+div::-webkit-scrollbar-thumb,
+textarea::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 0px;
+}
+
+div::-webkit-scrollbar-track,
+textarea::-webkit-scrollbar-track {
+  background: #eee;
+  border-radius: 0px;
+}
+
+div::-webkit-scrollbar-corner,
+textarea::-webkit-scrollbar-corner {
+  background: #585858;
+}
+
+div,
+textarea {
+  scrollbar-color: #ccc #eee;
+  /*scrollbar-width: thin;*/
+}

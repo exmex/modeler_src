@@ -1,0 +1,110 @@
+var _tspan;
+
+var _excluded = ["title", "titleId"];
+
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
+import * as React from "react";
+
+function SvgFullJsonIcon(_ref, svgRef) {
+  var title = _ref.title,
+      titleId = _ref.titleId,
+      props = _objectWithoutProperties(_ref, _excluded);
+
+  return /*#__PURE__*/React.createElement("svg", _extends({
+    width: "100%",
+    height: "100%",
+    viewBox: "0 0 450 150",
+    xmlns: "http://www.w3.org/2000/svg",
+    xmlnsXlink: "http://www.w3.org/1999/xlink",
+    xmlSpace: "preserve",
+    style: {
+      fillRule: "evenodd",
+      clipRule: "evenodd",
+      strokeLinejoin: "round",
+      strokeMiterlimit: 2
+    },
+    ref: svgRef,
+    "aria-labelledby": titleId
+  }, props), title ? /*#__PURE__*/React.createElement("title", {
+    id: titleId
+  }, title) : null, /*#__PURE__*/React.createElement("g", null, /*#__PURE__*/React.createElement("g", {
+    transform: "matrix(1,0,0,1,55.8423,0)"
+  }, /*#__PURE__*/React.createElement("g", {
+    transform: "matrix(0.511482,0,0,0.511482,44.2391,35.9875)"
+  }, /*#__PURE__*/React.createElement("path", {
+    d: "M79.865,119.1C115.263,167.355 149.905,105.631 149.854,68.513C149.794,24.627 105.313,0.099 79.836,0.099C38.944,0.099 -0,33.895 -0,80.135C-0,131.531 44.64,160 79.836,160C71.871,158.853 45.33,153.166 44.973,92.033C44.733,50.686 58.461,34.167 79.778,41.434C80.255,41.611 103.292,50.699 103.292,80.385C103.292,109.945 79.865,119.1 79.865,119.1Z",
+    style: {
+      fill: "url(#_Linear1)"
+    }
+  })), /*#__PURE__*/React.createElement("g", {
+    transform: "matrix(0.511482,0,0,0.511482,44.2391,35.9875)"
+  }, /*#__PURE__*/React.createElement("path", {
+    d: "M79.823,41.401C56.433,33.339 27.78,52.617 27.78,91.23C27.78,154.278 74.501,160 80.164,160C121.056,160 160,126.204 160,79.964C160,28.568 115.36,0.099 80.164,0.099C89.912,-1.251 132.705,10.649 132.705,69.136C132.705,107.277 100.752,128.041 79.97,119.169C79.493,118.992 56.456,109.905 56.456,80.218C56.456,50.658 79.823,41.4 79.823,41.4L79.823,41.401Z",
+    style: {
+      fill: "url(#_Linear2)"
+    }
+  })), /*#__PURE__*/React.createElement("g", {
+    transform: "matrix(1,0,0,1,-26.1059,73.3768)"
+  }, /*#__PURE__*/React.createElement("text", {
+    x: "181.127px",
+    y: "23.121px",
+    style: {
+      fontFamily: "'SegoeUI-Bold', 'Segoe UI', sans-serif",
+      fontWeight: 700,
+      fontSize: 56,
+      fill: "rgb(39,39,39)"
+    }
+  }, "J", _tspan || (_tspan = /*#__PURE__*/React.createElement("tspan", {
+    x: "206.233px 237.791px 280.424px ",
+    y: "23.121px 23.121px 23.121px "
+  }, "SON")))))), /*#__PURE__*/React.createElement("defs", null, /*#__PURE__*/React.createElement("linearGradient", {
+    id: "_Linear1",
+    x1: 0,
+    y1: 0,
+    x2: 1,
+    y2: 0,
+    gradientUnits: "userSpaceOnUse",
+    gradientTransform: "matrix(112.719,112.723,-112.723,112.719,23.6627,23.663)"
+  }, /*#__PURE__*/React.createElement("stop", {
+    offset: 0,
+    style: {
+      stopColor: "black",
+      stopOpacity: 1
+    }
+  }), /*#__PURE__*/React.createElement("stop", {
+    offset: 1,
+    style: {
+      stopColor: "white",
+      stopOpacity: 1
+    }
+  })), /*#__PURE__*/React.createElement("linearGradient", {
+    id: "_Linear2",
+    x1: 0,
+    y1: 0,
+    x2: 1,
+    y2: 0,
+    gradientUnits: "userSpaceOnUse",
+    gradientTransform: "matrix(-112.719,-112.713,112.713,-112.719,136.382,136.386)"
+  }, /*#__PURE__*/React.createElement("stop", {
+    offset: 0,
+    style: {
+      stopColor: "black",
+      stopOpacity: 1
+    }
+  }), /*#__PURE__*/React.createElement("stop", {
+    offset: 1,
+    style: {
+      stopColor: "white",
+      stopOpacity: 1
+    }
+  }))));
+}
+
+var ForwardRef = /*#__PURE__*/React.forwardRef(SvgFullJsonIcon);
+export default __webpack_public_path__ + "static/media/FullJSONIcon.c43747b797bf58f200b94559e7b2412d.svg";
+export { ForwardRef as ReactComponent };

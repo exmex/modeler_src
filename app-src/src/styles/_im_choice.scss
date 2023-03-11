@@ -1,0 +1,109 @@
+.im-line-markers {
+  margin-bottom: 5px;
+  background-color: $panel-bg;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.im-choice-box {
+  /*display: grid;
+  grid-template-columns: 1fr 1fr 1fr;*/
+  display: flex;
+  flex-wrap: wrap;
+}
+.im-line-markers .im-choice-box {
+  display: flex;
+  flex-wrap: wrap;
+}
+.im-choice {
+  min-width: 16px;
+  min-height: 16px;
+  flex-grow: 0;
+  display: flex;
+  background: rgba(255, 255, 255, 0.3);
+
+  margin-right: 2px;
+}
+
+.im-choice-selected {
+  min-width: 16px;
+  min-height: 16px;
+  background: #2196f3;
+  flex-grow: 0;
+  display: flex;
+
+  margin-right: 2px;
+}
+
+.im-choice:hover,
+.im-choice-selected:hover {
+  cursor: pointer;
+}
+
+.im-choice img,
+.im-choice-selected img {
+  align-self: center;
+  text-align: center;
+}
+
+/* markers */
+.im-choice-circle {
+  border-radius: 100%;
+  padding: 4px;
+  margin-right: 3px;
+  transform: scale(1);
+  transition: transform 0.1s;
+
+  display: flex;
+  justify-content: stretch;
+}
+
+.im-choice-circle:hover {
+  transform: scale(1.15);
+  transition: transform 0.1s;
+}
+
+.im-choice-markers {
+  height: 15px;
+  overflow: hidden;
+  /*background: rgba(255, 255, 255, 0.4);*/
+  border-radius: 4px;
+  margin: auto;
+  align-self: center;
+}
+
+/* project types */
+.im-choice-item {
+  padding: 4px 6px 4px 6px;
+  /*display: flex;*/
+  display: block;
+  padding-top: 6px;
+  margin-bottom: 2px;
+  border-radius: 2px;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.im-choice-item:not(:last-child) {
+  margin-right: 2px;
+}
+
+.im-choice-project-type {
+  max-height: 40px;
+  width: auto;
+  background: rgba(255, 255, 255, 1);
+  padding: 6px 1px;
+  border-radius: 2px;
+  margin: auto;
+}
+
+.im-choice-style{
+  max-height: 130px;
+  width: auto;
+  background: rgba(255, 255, 255, 1);
+  padding: 0;
+  border-radius: 2px;
+  margin: auto;
+}
+

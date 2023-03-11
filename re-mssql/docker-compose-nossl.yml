@@ -1,0 +1,53 @@
+version: "3"
+services:
+  sqlserver2022:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: sqlserver2022
+    restart: always
+    environment:
+      - ACCEPT_EULA=Y
+      - MSSQL_SA_PASSWORD=reallyStrongPwd123
+      - MSSQL_AGENT_ENABLED=true
+    ports:
+      - 3322:1433
+    volumes:
+      - /Data/mssql:/tmp/sqlserver2022/data
+  sqlserver2019:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    container_name: sqlserver2019
+    restart: always
+    environment:
+      - ACCEPT_EULA=Y
+      - MSSQL_SA_PASSWORD=reallyStrongPwd123
+      - MSSQL_AGENT_ENABLED=true
+    ports:
+      - 3319:1433
+    volumes:
+      - /Data/mssql:/tmp/sqlserver2019/data
+  sqlserver2017:
+    image: mcr.microsoft.com/mssql/server:2017-latest
+    container_name: sqlserver2017
+    restart: always
+    environment:
+      - ACCEPT_EULA=Y
+      - MSSQL_SA_PASSWORD=reallyStrongPwd123
+      - MSSQL_AGENT_ENABLED=true
+    ports:
+      - 3317:1433
+    volumes:
+      - /Data/mssql:/tmp/sqlserver2017/data
+  adv:
+    image: chriseaton/adventureworks:latest
+    container_name: adv
+    restart: always
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=reallyStrongPwd123
+    ports:
+      - 1433:1433
+    volumes:
+      - /Data/mssql:/tmp/adv/data
+networks:
+  default:
+    external: 
+      name: testnet 

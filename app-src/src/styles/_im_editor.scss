@@ -1,0 +1,51 @@
+.im-wysiwyg {
+  background: #626262;
+  border: 0;
+  border-top: 0px solid #ccc;
+  display: flex;
+  min-height: 250px;
+  flex-direction: column;
+}
+
+.im-wysiwyg .ql-container {
+  flex-grow: 1;
+}
+
+.im-wysiwyg > .ql-container.ql-snow {
+  border: 0;
+}
+
+.im-wysiwyg > .ql-toolbar.ql-snow {
+  border: 0;
+}
+
+.im-wysiwyg .ql-toolbar.ql-snow {
+  background: #444;
+  color: #fff;
+}
+
+.im-wysiwyg .ql-snow .ql-stroke,
+.im-wysiwyg svg {
+  stroke: #fff;
+}
+
+.ql-underline:hover .ql-fill,
+.ql-list:hover .ql-fill,
+.ql-clean:hover .ql-fill,
+.ql-image:hover .ql-fill,
+.ql-list.ql-active .ql-fill {
+  color: #06c;
+  stroke: #06c !important;
+}
+
+.ql-editor {
+  white-space: pre-line !important;
+}
+
+.im-wysiwyg > .ql-snow .ql-fill {
+  fill: #fff;
+}
+
+.im-wysiwyg > .ql-snow .ql-picker-label {
+  color: #fff;
+}

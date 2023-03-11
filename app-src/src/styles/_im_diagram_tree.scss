@@ -1,0 +1,1037 @@
+.tree__wrapper {
+  position:absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: max-content;
+  width: max-content;
+}
+
+.tree__wrapper * {
+  box-sizing: border-box;
+}
+
+.tree__spacer {
+  height: 40px;
+  width: 100%;
+  display: block;
+}
+
+.tree__mini__toolbar {
+  position: sticky;
+  top: 0;
+  width: 100%; 
+  left: 0;
+  right: 0;
+  margin: auto;
+  height: 24px;
+  background: #282828;
+  z-index: 9999;
+  display: flex;
+  box-shadow: 0px 0px 5px -2px #000;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+
+.tree__item__root {
+  display: flex;
+  color: #eee;
+  position: relative;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+.tree__item__root__wrapper {
+  display: flex;
+  margin: 15px 20px;
+}
+
+.tree__item__hidden__caption__text {
+  padding-left: 10px;
+  font-size: 12px;
+  width: max-content;
+  display: inline-block;
+  color: #999;
+  padding-top: 4px;
+}
+
+.tree__item__hidden__caption__text::after {
+  font-family: "im-line-icons" !important;
+  content: "";
+  background: transparent;
+  width: 20px;
+  height: 100%;
+  color: #999;
+  position: absolute;
+  top: 4px;
+  left: auto;
+  opacity: 0.6;
+  font-size: 10px;
+  padding-left: 5px;
+  padding-top: 4px;
+}
+
+.tree__item__root__name {
+  font-size: 12px;
+  display: inline-block;
+  width: fit-content;
+  align-self: center;
+  padding: 0;
+  border: 1px solid transparent;
+  background: $cols-bg;
+ 
+  padding: 1px 8px 1px 5px;
+  width: max-content;
+  min-width: 50px;
+}
+
+
+.tree__item {
+  display: flex;
+  margin: 0px 5px 0px 0px;
+  width: fit-content;
+  font-size: 10px;
+  position: relative;
+  padding-left: 20px;
+  padding-top: 3px;
+padding-bottom: 3px;
+}
+
+
+.tree__item:not(.t__tree__item__single__line):first-of-type::before {
+  content: " ";
+  position: absolute;
+  left: 2px;
+  top: 50%;
+  height: 50%;
+  width: 0;
+  border-left: thin solid $text-color;
+}
+
+.tree__item:not(.t__tree__item__single__line):last-of-type::before {
+  content: " ";
+  position: absolute;
+  left: 2px;
+  top: 0%;
+  height: 50%;
+  width: 0;
+  border-left: thin solid $text-color;
+}
+
+.tree__item.t__tree__item__single__line {
+  padding-left: 0 !important;
+}
+
+
+
+
+
+.tree__item__single__line::before{  
+  content: " ";
+  width: 0px;
+  height: 0;
+  background:  transparent;
+  position: absolute;
+  top: 50%;
+  left: -21px;  
+  border-bottom: thin solid $text-color;
+}
+
+.tree__item__first__line::before{
+  content: " ";
+  width: 21px;
+  height: 0;
+  position: absolute;
+  top: 50%;
+  left: -21px;  
+  border-top: thin solid $text-color;
+}
+
+.tree__item__last__line::before{
+  content: " ";
+  width: 21px;
+  height: 0;
+  position: absolute;
+  top: 50%;
+  left: -21px;  
+  border-top: thin solid $text-color;
+}
+
+.tree__item__middle__line::before{
+  content: " ";
+  width: 20px;
+  height: 0;
+  position: absolute;
+  top: 50%;
+  left: -21px;  
+  border-top: thin solid $text-color;
+}
+
+.t__tree__item__middle__line::before {
+  content: " ";
+  position: absolute;
+  left: 2px;
+  top: 0%;
+  height: 100%;
+  width: 0;
+  border-left: thin solid $text-color;
+}
+
+.tree__spec {
+  white-space: pre-wrap;
+  font-style: normal;
+  color: $text-color-secondary;
+  background: $bg-spec;
+  padding: 3px 4px 0px 4px;
+  font-size: 10px;
+  border-radius: 4px;
+  margin-top: 1px;
+}
+
+.tree__prop__key {
+  color: $col-object;
+  max-width: 180px;
+text-overflow: ellipsis;
+display: inline-block;
+overflow: hidden;
+}
+
+.tree__prop__value {
+  color: $text-color-secondary;
+  max-width: 180px;
+  text-overflow: ellipsis;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.tree__prop__comment {
+  color: $col-list;
+  max-width: 180px;
+  display: inline-block;
+  overflow: hidden;
+  padding-left: 2px;
+  font-size: 11px;
+  border-radius: 4px;
+  padding-right: 5px;
+}
+
+
+.tree__item__named {
+  display: inline-block;
+  width: fit-content;
+  align-self: center;
+  padding: 0;
+  border: thin solid transparent;
+  position: relative;
+  margin-right: 28px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.tree__item__named.sel-item-diagram-multi {
+  user-select: auto;
+  
+}
+
+.tree__expander__icon__left > i.im-icon-MinusCircle16::after {
+  content: " ";
+  width: 15px;
+  height: 0;
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  background:  transparent;
+  border-bottom: thin solid $text-color;
+}
+
+.tree__item__bg {
+  background: $cols-bg;
+  border: thin dashed rgba(255,255,255,0.2);
+  box-shadow: 4px 4px 8px -8px black;
+  padding: 3px;
+  width: max-content;
+  position: relative;
+}
+
+.tree__item__spec__bg span {
+  padding: 3px;
+  display: inline-block;
+}
+
+.tree__item__required {
+  border: thin solid rgba(255,255,255,0.2);
+}
+
+.tree_padding_sm {
+  padding: 3px;
+}
+
+.tree__item__sub {
+  display: inline-block;
+  margin: 0;
+  left: -5px;
+  position: relative;
+  align-self: center;
+ 
+}
+
+.group {
+  /*background: url(bg-vertical.svg);*/
+  background-repeat: repeat-y;
+background-position-x: 20px;
+background-position-y: center;
+background-size: 1px 100%;
+}
+
+.tree__expander__icon {
+  align-self: center;
+  position: relative;
+  left: -6px;
+  top: 1;
+  background: $cols-bg;
+  border-radius: 100%;
+  box-shadow: 4px 4px 8px -6px black;
+  cursor: pointer;
+  padding: 1px;
+  width: 15px;
+  height: 15px;
+  z-index: 999;
+}
+
+.tree__expander__icon__left {
+  align-self: center;
+  display: block;
+ 
+
+  cursor: pointer;
+  padding: 1px;
+  width: 15px;
+  height: 15px;
+  z-index: 999;
+  position: absolute;
+  right: -15px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+ 
+}
+
+.tree__expander__icon__left i.im-icon-FullCircle {
+position: absolute;
+top: 0px;
+left: -5px;
+width: 15px;
+height: 15px;
+color: $cols-bg;
+}
+
+.tree__expander__icon__left i.im-icon-MinusCircle16, .tree__expander__icon__left i.im-icon-PlusCircle16 {
+  position: relative;
+  left: -6px;
+  background: transparent;
+  border-radius: 100%;
+}
+
+.tree__flex__rows {
+  display: flex;
+  font-size: 11px;
+}
+
+.tree__flex {
+  display: flex;
+}
+
+.tree__select {
+  padding: 0;
+  width: 100%;
+  max-width: 100% !important;
+}
+
+.tree__select option {
+  padding: 1px;
+  width: 80px;
+}
+
+.tree__input {
+  width: 100%;
+  min-width: 60px;
+  border: thin solid transparent;
+  border-bottom-color: transparent;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-radius: 2px;
+  padding: 0 2px;
+  font-family: "Open Sans";
+  font-size: 12px;
+}
+
+.tree__item input, .tree__item__rootbox input {
+  background: $cols-bg;
+  border-bottom: 1px solid transparent;
+  margin-bottom: 0;
+}
+
+.tree__item__box {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 4px;
+}
+
+.tree__item__rootbox {
+  display: grid;
+  grid-template-columns: 15px 1fr;
+  grid-gap: 0;
+}
+
+.tree__item__type {
+  text-align: center;
+}
+
+.tree__item__req {
+  display: inline-block;
+  align-self: right;
+  background: $schema-box;
+  margin: 0 4px;
+  padding: 1px 4px 1px 4px;
+  border-radius: 4px;
+  color: $text-color;
+}
+
+.tree__item__last {
+  display: grid;
+  grid-template-columns: 1fr auto;
+}
+
+.tree__item__last > div >  div  {
+  margin: 1px 4px 4px 4px;
+}
+
+ .tree__item__last > div >  span:first-of-type {
+  margin: 1px 0px 1px 4px;
+  padding-top: 3px;
+}
+
+.tree__required {
+  color:$text-color;
+  padding-right: 2px;
+  display: inline-block;
+  font-style: normal;
+  font-size: 9px;
+}
+
+.tree__item__inputwrapper {
+  padding-right: 5px;
+  display: grid;
+  grid-template-columns: 1fr;
+  font-size: 11px;
+  color: $text-color;
+}
+ 
+
+.tree__condition__wrapper .tree__item__inputwrapper {
+  padding-right: 0;
+}
+.tree__condition__wrapper .tree__item__last { 
+  padding-left: 0;
+}
+
+
+
+.tree__key__inputwrapper .tree__input {
+  color: $text-color-secondary;
+}
+
+.tree__key__inputwrapper {
+  padding-right: 3px;
+  padding-left: 2px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  font-size: 10px;
+  color: $text-color;
+}
+
+.tree__item__icon {
+  font-size: 11px;
+  position: relative;
+  top: 1px;
+}
+
+.tree__icon__array {
+  font-size: 11px;
+  color: $col-list;
+  padding-right: 4px;
+  padding-left: 1px;
+  font-style: normal;
+}
+
+.tree__icon__array__mini{
+  font-size: 8px;
+  color: $col-list;
+  padding-right: 2px;
+  padding-left: 1px;
+  position: relative;
+  bottom: 1px;
+  font-style: italic;
+}
+
+.tree__icon__multi { 
+  font-size: 11px;
+  color: $col-multi;
+  padding-right: 4px;
+  padding-left: 1px;
+  font-style: normal;
+}
+
+.tree__icon__array i.im-icon-DotsVerticallDouble16  {
+  font-size: 10px;
+  color: $col-list;
+  padding: 0;
+  position: relative;
+  top: 1px;
+}
+
+.tree__icon__pattern{
+  font-size: 10px;
+  color:$box-text;
+  padding-right: 4px;
+  font-style: normal;
+  display: inline-block;
+  align-self: center;
+}
+
+.tree__icon__object{
+  font-size: 10px;
+  color:$col-object;
+  padding-right: 4px;
+  font-style: normal;
+  display: inline-block;
+  align-self: center;
+}
+
+.tree__icon__object__mini{
+  font-size: 8px;
+  color:$col-object;
+  padding-right: 2px;
+  position: relative;
+  bottom: 1px;
+  font-style: italic;
+}
+
+
+.tree__icon__object i.im-icon-ArrowLeft16 {
+  font-size: 9px;
+  color: $col-object;
+  padding: 0;
+  position: relative;
+  top: 1px;
+}
+
+.tree__icon__ref i.im-icon-Type {
+  font-size: 9px;
+  color: $outline;
+  padding: 0;
+  position: relative;
+  top: 1px;
+}
+
+.tree__icon__ref i.im-icon-Table  {
+  font-size: 9px;
+  color: $col-object;
+  padding: 0;
+  position: relative;
+  top: 1px;
+}
+
+.tree__icon__object i.im-icon-Table  {
+  font-size: 9px;
+  color: $text-color;
+  padding: 0;
+  position: relative;
+  top: 1px;
+}
+
+.tree__icon__object i.im-icon-DotsVerticallDouble16 {
+  font-size: 10px;
+  color: $col-object;
+  padding: 0;
+  position: relative;
+  top: 1px;
+}
+
+
+.tree__icon__condition{
+  background: darkmagenta;
+  color: rgba(255,255,255,0.7);
+  padding-right: 1px;
+  font-style: normal;
+  display: inline-block;
+  font-size: 9px;
+  padding: 2px 4px;
+  min-width: 25px;
+  text-align: center; 
+  border-radius: 5px;
+  bottom: 0;
+  position: relative;
+  top: -3px; 
+  width: auto; 
+  margin: 0 5px;
+  text-transform: uppercase;
+}
+
+.tree__icon__def{
+  color: $col-object;
+  padding-right: 1px;
+  font-style: normal;
+  display: inline-block;
+}
+
+.tree__icon__referenced {
+  color: $col-referenced;
+  padding-right: 4px;
+  font-style: normal;
+  display: inline-block;
+  font-size: 13px;
+}
+
+.tree__ref__key {
+  color: $col-referenced;
+  font-size: 11px;
+  max-width: 180px;
+  text-overflow: ellipsis;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.tree__datatype__name {
+  color: $datatype-json;
+  padding-left: 2px;
+  padding-right: 10px;
+  text-align: left;
+  margin-left: 0px;
+  font-size: 11px;
+}
+
+.tree__item__index {
+  color: $text-color;
+  opacity: 0.8;
+}
+
+.tree__item__hidden {
+  padding-right: 10px;
+  opacity: 0;
+  font-size: 12px;
+  line-height: 0;
+  padding-left: 3px;
+
+}
+.tree__item__hidden__caption {
+  opacity: 0;
+  position: sticky;
+  top: -2px;
+  bottom: unset;
+  height: 24px;
+  align-self: center;
+  z-index: -1;
+  width: 2px;
+}
+
+
+.tree__item__root svg {
+  position: absolute;
+  width: 45px;
+  height: 100%;
+  left: -5px;
+  top: 5px;
+}
+
+.tree__item__root line,
+.tree__item__root path {
+  stroke-width: 1;
+  stroke: #fff;
+}
+
+#diagram-tree {
+  margin: 30px;
+  position: relative;
+}
+
+#diagram-tree svg {
+  margin: 2px;
+}
+
+
+#diagram-tree .im-mw-sm, #diagram-tree input.im-mw-sm, #diagram-tree select.im-mw-sm  {
+  min-width: fit-content !important;
+  width: fit-content !important;
+}
+
+#diagram #svgMain {
+  top: 0px;
+  left: 0px;
+  background: transparent;
+  position: absolute;
+  height: 100%;
+}
+
+
+#diagram #mainHtmlCanvas {
+  height: 100%;
+  transform-origin: 0 0;
+}
+
+#diagram {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.im-position-top-2 {
+  position: relative;
+  top: -2px;
+}
+
+.tree__key {
+  width: max-content;  
+  align-self: center;
+  position: relative;
+  left:-1px;
+  background-position: -3px center;
+  background-repeat:  no-repeat;
+  background-size: 28px 24px;
+  stroke: $svg-stroke !important; 
+  font-size: 10px;
+  color: $text-color-secondary;
+  box-shadow: 4px 4px 8px -8px black;
+}
+
+.tree__key__text {
+  color: $text-color-secondary;
+  font-size: 10px;
+  background: $cols-bg;
+  border-radius: 8px;
+  min-width: 28px;
+  padding: 2px 5px 2px 5px;
+}
+
+.tree__key__text__mini {
+  font-size: 12px;
+  border-radius: 4px;
+  min-width: 28px;
+  min-height: 12px;
+  padding: 1px 6px 1px 0;
+  text-align: center;
+  color: $text-color-secondary;
+}
+
+.tree__mini__selected {
+  background: #0267b7;
+  border-radius: 4px;
+  position: relative;
+  left: -3px;
+  padding-left: 3px;
+  padding-right:  1px !important;
+  color: white;
+  max-height: 16px;
+}
+
+.im-arrow .tree__mini__clickable,  .im-Arrow .tree__mini__clickable{
+  cursor: pointer;
+}
+
+.im-arrow .tree__mini__clickable:hover, .im-Arrow .tree__mini__clickable:hover {
+  background: $link-side-hover-bg;
+  border-radius: 4px;
+  position: relative;
+  left: -3px;
+  padding-left: 3px;
+  padding-right:  1px !important;
+  color: white !important;
+  max-height: 16px;
+}
+
+.im-the-ghost .tree__mini__clickable:hover {
+  background: rgba(0,0,0,0.08);
+  color: transparent !important;
+  cursor: default;
+  margin-top: 2px;
+  max-height: 10px;
+  min-height: 8px;
+  max-width: 50px;
+  border-radius: 5px;
+  left: 0;
+}
+
+.tree__mini__selected .tree__key__text__mini {
+  color: white;
+}
+
+.tree__choice, .tree__condition {
+  width: max-content;  
+  align-self: center;
+  position: relative;
+  left:-1px;
+  background-position: -3px center;
+  background-repeat:  no-repeat;
+  background-size: 28px 24px;
+  padding-left: 13px; 
+  font-size: 10px;
+  color: rgba(255,255,255,0.8);
+}
+
+.tree__choice__mini {
+  background-size: 20px 16px;
+  background-position: -1px center;
+  padding-left: 12px; 
+  background-repeat:  no-repeat;
+  font-style: italic;
+}
+
+.tree__choice__oneOf {
+  background-image: $bg-one-of;
+}
+
+.tree__choice__allOf {
+  background-image: $bg-all-of;
+}
+
+.tree__choice__anyOf {
+  background-image: $bg-any-of;
+}
+
+.tree__choice__not {
+  background-image: $bg-not;
+}
+
+.tree__choice__wrapper {
+  background: darkgreen;
+  border-radius: 11px;
+  padding: 0 3px;
+}
+
+.tree__choice__text {
+  font-size: 10px;
+  background: darkgreen;
+  border-radius: 11px;
+  min-width: 28px;
+  padding: 5px 9px 3px 7px;
+  text-align: center;
+}
+
+.tree__choice__text__mini {
+  font-size: 10px;
+  background: darkgreen;
+  border-radius: 4px;
+  min-width: 28px;
+  min-height: 12px;
+  padding: 1px 6px 0px 4px;
+  text-align: center;
+  color: rgba(255,255,255,0.8);
+  font-style: italic;
+}
+
+.tree__condition {
+  background-position: 0 center;
+  padding-left: 16px;
+}
+
+.tree__condition__if {
+  background-image: $bg-if;
+
+  color: white;
+}
+
+.tree__condition__then {
+  background-image: $bg-then;
+
+  color: white;
+}
+
+.tree__condition__else {
+  background-image: $bg-else;
+
+  color: white;
+}
+
+.tree__condition__wrapper {
+  border-radius: 11px;
+  overflow: hidden;
+  background: $bg-condition-spec;
+  box-shadow: 4px 4px 8px -8px black;
+}
+
+.tree__condition__text {
+  font-size: 10px;
+  background: $bg-condition;
+  min-width: 24px;
+  padding: 5px 9px 3px 7px;
+  text-align: center;
+  color: white;
+  border-radius: 11px;
+}
+
+.tree__condition__text__mini {
+  font-size: 10px;
+  background: $bg-condition;
+  border-radius: 4px;
+  min-width: 28px;
+  min-height: 12px;
+  padding: 1px 6px 0px 4px;
+  text-align: center;
+  color: rgba(255,255,255,0.8);
+  font-style: italic;
+  color: white;
+}
+
+input::placeholder {
+  color: $placeholder;
+  font-style: italic;
+  opacity: 0.5;
+}
+
+.tree__bg__referenced, .tree__bg__subschema {
+  background: rgba(0,0,0,0.1);
+  border: thin dashed rgba(255,255,255,0.2);
+  padding: 15px 2px 15px 20px; 
+  position: relative;
+}
+
+.tree__bg__referenced:before {
+  content: "Definition";
+  position: absolute;
+  top: 3px;
+  left: 5px;
+  color: $text-color;
+  opacity: 0.3;
+  font-size: 8px;
+  text-transform: uppercase;
+}
+
+.tree__subschema {
+  position: relative;
+}
+
+.tree__subschema::before {
+  content: "Subschema";
+  position:absolute;
+  top: 5px;
+  left: 5px;
+  color: $text-color;
+  opacity: 0.3;
+  font-size: 8px;
+  text-transform: uppercase;
+}
+
+.tree__bg__subschema::before {
+  content: " ";
+  width: 20px;
+  height: 0;
+  position: absolute;
+  top: calc(50% - 0.5px);
+  left: 0px;
+  border-top: thin solid $text-color;
+  margin-bottom: 1px;  
+}
+
+.tree__schema:before {
+  content: "Schema";
+  position: absolute;
+  top: -15px;
+  left: 1px;
+  color: $text-color;
+  opacity: 0.5;
+  font-size: 8px;
+  text-transform: uppercase;
+}
+
+.tree__definition:before {
+  content: "Subschema";
+  position: absolute;
+  top: -15px;
+  left: 1px;
+  color: $text-color;
+  opacity: 0.5;
+  font-size: 8px;
+  text-transform: uppercase;
+}
+
+.tree__ref:before {
+  content: "External ref";
+  position: absolute;
+  top: -15px;
+  left: 1px;
+  color: $text-color;
+  opacity: 0.5;
+  font-size: 8px;
+  text-transform: uppercase;
+}
+
+.tree__choice__wrapper .tree__prop__comment {
+  background: $diagram;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  padding: 3px 7px 2px 4px;
+  text-align: left;
+}
+
+
+.tree__item__hidden__caption[sticky-active] {
+  opacity: 1;
+  z-index: 9999; 
+
+}
+
+@media print {
+ 
+
+  .mm-freeware #mainHtmlCanvas div.tree__item:nth-child(3n) .tree__item__bg::after, .mm-trial #mainHtmlCanvas div.tree__item:nth-child(3n) .tree__item__bg::after{
+    content: " Trial ";
+    display: inline-block;
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    right: 1px;
+    bottom: 1px;
+    background: rgba(0,0,0,0.8);
+    color: white;
+    padding: 0;
+    text-align: center;
+    padding-top: 5px;
+  }
+}
+
+.tree__empty_decorator {
+  display: inline-block;
+  min-width: 6px;
+}
+
+.tree__breadcrumbs {
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+
+.tree__bread__caption {
+  display: inline-block;
+  font-size: 9px;
+  text-transform: uppercase;
+  color: #eee;
+  opacity: 0.5;
+  padding: 0 4px 0 20px;
+}
+
+.tree__bread__value {
+  padding: 0 4px 0 4px;
+  cursor: pointer;
+  color: $text-color-secondary;
+  display: inline-block;
+  font-size: 12px;
+}
+

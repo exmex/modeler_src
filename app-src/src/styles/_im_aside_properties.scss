@@ -1,0 +1,432 @@
+.im-properties-grid {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  grid-row-gap: 3px;
+  grid-column-gap: 3px;
+  justify-content: stretch;
+  justify-items: stretch;
+  padding-bottom: 3px;
+}
+
+.im-index-assist-grid {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  grid-row-gap: 3px;
+  grid-column-gap: 3px;
+  justify-content: stretch;
+  justify-items: stretch;
+  padding-bottom: 3px;
+}
+
+.im-properties-grid-sql {
+  grid-template-columns: auto 1fr;
+  grid-column-gap: 8px;
+}
+
+.modal-sql .im-properties-grid-sql {
+  padding: 20px;
+}
+
+.dRowForm {
+  display: grid;
+  border-radius: 2px;
+  min-height: 12px;
+  padding-top: 2px;
+  justify-content: stretch;
+  justify-items: stretch;
+  grid-column-gap: 0;
+  min-width: 350px;
+}
+
+.dRowForm input[type="text"] {
+  margin-right: 2px;
+}
+
+.dRowForm select {
+  margin-right: 2px;
+}
+
+.dRowFormSEQUELIZE,
+.dRowFormMARIADB,
+.dRowFormMYSQL,
+.dRowFormPG,
+.dRowFormMSSQL {
+  grid-template-columns: 20px 2fr 110px 1fr 22px 22px 22px 22px 20px;
+}
+
+.dRowFormSQLITE {
+  grid-template-columns: 20px 2fr 110px 22px 22px 22px 20px;
+}
+
+.dRowFormLOGICAL {
+  grid-template-columns: 20px 2fr 110px 22px 22px 22px 20px;
+}
+
+.dRowFormJSONSCHEMA, .dRowFormFULLJSON, .dRowFormOPENAPI {
+  grid-template-columns: 20px 2fr 110px 22px 22px 22px 20px;
+}
+
+.dRowFormJSON {
+  grid-template-columns: 20px 2fr 110px 22px 22px 20px 20px;
+}
+
+.dRowFormPGComposite {
+  grid-template-columns: 20px 2fr 110px 1fr 22px 20px 20px;
+}
+
+.dRowFormMONGODB,
+.dRowFormGRAPHQL,
+.dRowFormMONGOOSE {
+  grid-template-columns: 20px 2fr 100px 22px 22px 22px 20px 20px;
+}
+
+.dRowFormPGIndex, .dRowFormMSSQLIndex {
+  grid-template-columns: 20px 50px 50px 50px 50px 50px 50px 50px;
+}
+
+.dRowFormGRAPHQLUnion {
+  grid-template-columns: 20px 1fr 20px;
+}
+
+.dRowForm.dRowFormGRAPHQLUnion select {
+  width: 100%;
+  max-width: 100%;
+}
+
+.modal .dRowFormSEQUELIZE,
+.modal .dRowFormMARIADB,
+.modal .dRowFormMYSQL {
+  grid-template-columns: 20px minmax(auto, 1fr) minmax(100px, 1fr) minmax(auto, 0.3fr) 30px 30px 30px 20px;
+}
+
+.modal .dRowFormPG, .modal .dRowFormMSSQL {
+  grid-template-columns: 20px minmax(auto, 1fr) minmax(100px, 1fr) minmax(auto, 0.3fr) 30px 30px 30px 30px 20px;
+}
+
+.modal .dRowFormSQLITE {
+  grid-template-columns: 20px minmax(auto, 1fr) minmax(100px, 1fr) 30px 30px 30px 30px;
+}
+
+.modal .dRowFormLOGICAL {
+  grid-template-columns: 20px minmax(auto, 1fr) minmax(100px, 1fr) 30px 30px 30px 30px;
+}
+
+.modal .dRowFormJSONSCHEMA, .modal .dRowFormFULLJSON, .modal .dRowFormOPENAPI {
+  grid-template-columns: 20px minmax(auto, 1fr) minmax(100px, 1fr) 30px 30px 30px 30px;
+}
+
+.modal .dRowFormMONGODB,
+.modal .dRowFormGRAPHQL,
+.modal .dRowFormMONGOOSE {
+  grid-template-columns: 20px minmax(auto, 1fr) minmax(100px, 1fr) 30px 30px 30px 30px 30px;
+}
+
+.modal .dRowFormJSON {
+  grid-template-columns: 20px minmax(auto, 1fr) minmax(100px, 1fr) 22px 22px 20px 20px;
+}
+
+.dNewColRowForm {
+  display: grid;
+  border-radius: 2px;
+  min-height: 12px;
+  padding-top: 2px;
+  justify-content: stretch;
+  justify-items: stretch;
+  grid-column-gap: 2px;
+  min-width: 350px;
+  font-size: 10px;
+  /*text-transform: uppercase;*/
+  font-weight: 500;
+}
+
+.dNewColRowFormSEQUELIZE,
+.dNewColRowFormMARIADB,
+.dNewColRowFormMYSQL {
+  grid-template-columns: 2fr 110px 1fr 22px 22px 44px;
+}
+.dNewColRowFormPG, .dNewColRowFormMSSQL  {
+  grid-template-columns: 2fr 110px 1fr 22px 22px 22px 30px;
+}
+
+.dNewColRowFormSQLITE {
+  grid-template-columns: 2fr 110px 22px 22px 44px;
+}
+
+.dNewColRowFormLOGICAL {
+  grid-template-columns: 2fr 110px 22px 22px 44px;
+}
+.dNewColRowFormJSONSCHEMA, .dNewColRowFormFULLJSON, .dNewColRowFormOPENAPI {
+  grid-template-columns: 2fr 110px 22px 22px 44px;
+}
+
+.dNewColRowFormJSON {
+  grid-template-columns: 2fr 110px 22px 22px 44px;
+}
+
+.dNewColRowFormMONGODB,
+.dNewColRowFormGRAPHQL,
+.dNewColRowFormMONGOOSE {
+  grid-template-columns: 2fr 110px 22px 22px 22px 44px;
+}
+
+.dNewIndexAssist {
+  grid-template-columns: 2fr 1fr 44px;
+}
+
+.modal .dNewColRowFormSEQUELIZE,
+.modal .dNewColRowFormMARIADB,
+.modal .dNewColRowFormMYSQL {
+  grid-template-columns: 2fr 1fr 1fr 30px 30px 44px;
+}
+.modal .dNewColRowFormPG, .modal .dNewColRowFormMSSQL {
+  grid-template-columns: 2fr 1fr 1fr 30px 30px 30px 44px;
+}
+
+.modal .dNewColRowFormSQLITE {
+  grid-template-columns: 2fr 1fr 30px 30px 44px;
+}
+
+.modal .dNewColRowFormLOGICAL {
+  grid-template-columns: 2fr 1fr 30px 30px 44px;
+}
+.modal .dNewColRowFormJSONSCHEMA, .modal .dNewColRowFormFULLJSON, .modal .dNewColRowFormOPENAPI {
+  grid-template-columns: 2fr 1fr 30px 30px 44px;
+}
+.modal .dNewColRowFormMONGODB,
+.modal .dNewColRowFormGRAPHQL,
+.modal .dNewColRowFormMONGOOSE {
+  grid-template-columns: 2fr 1fr 30px 30px 30px 44px;
+}
+
+.modal .dNewColRowFormJSON {
+  grid-template-columns: 2fr 1fr 22px 22px 44px;
+}
+
+.modal .dNewColRowForm {
+}
+
+.im-keys-grid-header {
+  display: grid;
+  grid-template-columns: 20px 1fr 22px;
+  grid-template-rows: 18px;
+  justify-items: stretch;
+  justify-content: stretch;
+  grid-row-gap: 3px;
+  grid-column-gap: 3px;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 10px;
+}
+
+.im-keys-grid {
+  display: grid;
+  grid-template-columns: 20px 1fr 20px;
+
+  justify-items: stretch;
+  justify-content: stretch;
+  grid-column-gap: 3px;
+  padding-top: 2px;
+}
+
+
+.im-keys-grid-pg, .im-keys-grid-mssql {
+  display: grid;
+  grid-template-columns: 20px 1fr 20px 20px;
+
+  justify-items: stretch;
+  justify-content: stretch;
+  grid-column-gap: 3px;
+  padding-top: 2px;
+}
+
+.im-relations-grid-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  justify-items: stretch;
+  justify-content: stretch;
+  font-weight: 700;
+  grid-row-gap: 3px;
+  grid-column-gap: 3px;
+
+  text-transform: uppercase;
+  font-size: 10px;
+}
+
+.im-relations-grid {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  grid-template-rows: 24px;
+  justify-items: stretch;
+  justify-content: stretch;
+  grid-row-gap: 3px;
+  grid-column-gap: 3px;
+}
+
+.im-relations-grid div,
+.im-relations-grid a {
+  align-self: center;
+  color: $text-color;
+}
+
+.im-subpanel a, .im-subpanel-rel a,
+.im-relations-grid a {
+  color: $link-color;
+}
+
+.im-subpanel a:hover, .im-subpanel-rel a:hover,
+.im-relations-grid a:hover {
+  text-decoration: underline;
+}
+
+.im-subpanel {
+  padding: 0px 5px 0px 2px;
+}
+
+.im-subpanel-rel {
+  margin-bottom: 12px;
+  display: grid;
+  grid-template-columns: minmax(auto, 50px) 1fr;
+  grid-column-gap: 10px;
+}
+
+.im-key-detail-grid {
+  padding: 2px 0 2px 0;
+  display: grid;
+  grid-template-columns: 100px 1fr 22px 22px 22px;
+  justify-items: stretch;
+  justify-content: stretch;
+  grid-row-gap: 3px;
+  grid-column-gap: 3px;
+}
+
+.im-index-detail-grid {
+  padding: 1px 0 0 0;
+  display: grid;
+  grid-template-columns: 100px 1fr 22px 22px 22px;
+  justify-items: stretch;
+  justify-content: stretch;
+  grid-row-gap: 3px;
+  grid-column-gap: 3px;
+}
+
+.im-index-assist {
+  padding: 1px 10px 0 10px;
+  display: grid;
+  grid-template-columns: 2fr 1fr 22px 22px;
+  justify-items: stretch;
+  justify-content: stretch;
+  grid-row-gap: 3px;
+  grid-column-gap: 3px;
+}
+
+.im-index-detail-grid-pg {
+  padding: 1px 0 0 0;
+  display: grid;
+  grid-template-columns: 100px 1fr 30px 18px 20px 20px;
+  justify-items: stretch;
+  justify-content: stretch;
+  grid-row-gap: 3px;
+  grid-column-gap: 3px;
+}
+
+.im-index-detail-grid-mssql {
+  padding: 1px 0 0 0;
+  display: grid;
+  grid-template-columns: 100px 1fr 30px 18px 20px;
+  justify-items: stretch;
+  justify-content: stretch;
+  grid-row-gap: 3px;
+  grid-column-gap: 3px;
+}
+
+.im-index-detail-grid-pg-detail {
+  padding: 1px 0 0 0;
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  justify-items: stretch;
+  justify-content: stretch;
+  grid-row-gap: 3px;
+  grid-column-gap: 3px;
+}
+
+.im-index-detail-grid-mssql-detail {
+  padding: 1px 0 0 0;
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  justify-items: stretch;
+  justify-content: stretch;
+  grid-row-gap: 3px;
+  grid-column-gap: 3px;
+}
+
+.im-rel-key-col-grid {
+  padding: 1px 0 1px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: stretch;
+  justify-content: stretch;
+  grid-row-gap: 3px;
+  grid-column-gap: 3px;
+}
+
+.im-cardinality-grid input, .im-cardinality-grid select {
+ min-width: 100px;
+}
+
+.im-field-and-btn {
+  display: grid;
+  grid-template-columns: 1fr 22px;
+}
+
+
+.dPropVisible {
+  display: block;
+}
+
+.dPropHidden {
+  display: none;
+}
+
+.im-mw-sm {
+  min-width: 90px;
+}
+
+.newColForm {
+  background: $new-col-form;
+  padding: 2px 10px 6px 10px;
+  box-shadow: $new-col-form-shadow;
+  margin: 8px;
+
+  border-radius: 2px;
+  border: 0px solid #fff;
+  background: $dark-panel;
+  color: $text-color;
+}
+
+.im-new-item-wrapper {
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.im-code-actions {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px;
+  padding: 4px 4px 4px 8px;
+  margin: 1px 10px 5px 18px;
+  color: $text-color;
+}
+
+.im-code-actions-wide {
+  padding: 4px 2px 4px 2px;
+  margin: 1px 0 5px 0;
+}
+
+.dRowForm select {
+  /*max-width: 110px;*/
+}
+
+.modal .dRowForm select {
+  max-width: 800px;
+}

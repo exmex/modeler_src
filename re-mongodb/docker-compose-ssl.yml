@@ -1,0 +1,33 @@
+version: "3"
+services:
+  mongo_ssl:
+    image: mongo
+    container_name: mongo_ssl
+    command: --tlsMode requireTLS --tlsCertificateKeyFile /etc/certs/server.pem --tlsCAFile /etc/certs/ca.crt
+    volumes:
+      - type: bind
+        source: ./docker-compose/ssl-certs/mongodb
+        target: /etc/certs
+    restart: always
+    ports:
+      - 37019:27017
+  mongo_sha256_ssl:
+    image: mongo
+    container_name: mongo_sha256_ssl
+    command: --tlsMode requireTLS --tlsCertificateKeyFile /etc/certs/server.pem --tlsCAFile /etc/certs/ca.crt
+    volumes:
+      - type: bind
+        source: ./docker-compose/ssl-certs/mongodb
+        target: /etc/certs
+    restart: always
+    ports:
+      - 37020:27017
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=mongouser
+      - MONGO_INITDB_ROOT_PASSWORD=mongopass
+      - MONGO_INITDB_DATABASE=anotherdb      
+networks:
+  default:
+    external: 
+      name: testnet 
+  

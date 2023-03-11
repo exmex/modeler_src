@@ -1,0 +1,119 @@
+$app-window-color: #ededed;
+$main-area-color: #ededed;
+$message-color: #666;
+$footer-color: #fff;
+$text-color: #000;
+$text-color-secondary: #393939;
+$link-color: #007add;
+$dark-panel: #dfdfdf;
+$table-bg: #fff;
+$table-border: #ddd;
+$note-text-color: #555;
+$pre-color: #393939;
+$datatype-color: #666;
+$outline: #2196f3;
+$theme-color: #fff;
+$theme-reverse-color: #000;
+$svg-stroke: #000;
+$svg-fill: #fff;
+$svg-main: #ededed;
+$sel-relation: #2196f3;
+$relation-bg: rgba(255, 255, 255, 0.01);
+$sel-relation-bg: #2196f3;
+$embedded-bg: rgba(0, 0, 0, 0.05);
+$embedded-bg-tree: rgba(0, 0, 0, 0.01);
+$col-list: darkgreen;
+$col-object: darkgoldenrod;
+$col-multi: white;
+$col-referenced: #2196f3;
+$line-separator: #eee;
+$dropdown-bg: #fff;
+$shadow: 0 0 15px 0 #333;
+$link-hover-bg: #333;
+$link-side-hover-bg: #2196f3;
+$link-side-selected-bg: #007add;
+$link-side-focused-bg: #0267b7;
+$cols-bg: #fff;
+$new-col-form: #f9f9fa;
+$new-col-form-shadow: none;
+$splitter-bg: rgba(0, 0, 0, 0.3) !important;
+$full-page-bg: #ededed;
+$grid-row-bg: #f2f2f2;
+$grid-row-hover-bg: #fff;
+$box-text: #666;
+$icon: #666;
+$icon-hover: rgba(171, 219, 255, 0.5);
+$selected-li: #0267b7;
+$panel-bg: #eee;
+$cat-header: #ccc;
+$modal-bg: #fff;
+$modal-header: #fff;
+$modal-content-bg: #eee;
+$diagram-panel-tabs-bg: #fff;
+$gradient-full: linear-gradient(
+  90deg,
+  rgba(255, 255, 255, 0),
+  rgba(255, 255, 255, 0),
+  rgb(76, 175, 80),
+  purple,
+  red,
+  orange,
+  #2196f3,
+  rgba(255, 255, 255, 0),
+  rgba(255, 255, 255, 0)
+);
+$modal-content-bg: #eee;
+$cat-bg-border: rgba(255, 255, 255, 0.1);
+$tab-color: #555;
+$tab-bg: #666;
+$tab-color-hover: #000;
+$scrollbar-thumb: #ccc;
+$scrollbar-track: #eee;
+$scrollbar-div: #ccc #eee;
+$search-border: 1px solid #ccc;
+$search-bg: #fff;
+$search-placeholer: #666;
+$input-bg: #fff;
+$input-bg-active: #ccc;
+$input-color: #000;
+$im-white: #ddd;
+$btn-default-bg: #2196f3;
+$btn-default-hover-bg: #393939;
+$btn-secondary-bg: #999;
+$btn-secondary-hover-bg: #393939;
+$btn-tertiary-bg: #eee;
+$btn-tertiary-hover-bg: #ccc;
+$btn-tertiary-hover-border: 1px solid rgba(0, 0, 0, 0.3);
+$back-shadow: #666;
+$switch-bg: #ccc;
+$switch-before: #fff;
+$switch-focus: #666;
+$chk-bg: #ccc;
+$chk-hover: #fff;
+$chk-checked: #fff;
+$chk-chk: #333;
+$message-err: #cc0000;
+$message-text: #000;
+$datatype: #666;
+$datatype-json: #666;
+$modal-cat-bg-border: #ddd;
+$placeholder: #999;
+$arrow: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' version='1.1' height='15px' width='15px'%3E%3Ctext x='0' y='13' fill='333333'%3E%E2%96%BE%3C/text%3E%3C/svg%3E");
+$aside-bg: #dfdfdf;
+$aside-toggle: #555;
+$diagram:#ededed;
+$schema-box: rgba(0,0,0,0.1);
+$schema-key: #ddd;
+$bg-condition: #A900B1;
+$bg-one-of: url(oneOf-light.svg);
+$bg-all-of: url(allOf-light.svg);
+$bg-any-of: url(anyOf-light.svg);
+$bg-not: url(not-light.svg);
+$bg-if: url(if-light.svg);
+$bg-then: url(then-light.svg);
+$bg-else: url(else-light.svg);
+$br-search-result: darkgoldenrod;
+$bg-textarea-code:  rgba(255,255,255,0.7);
+$bg-spec: #eee;
+$bg-condition-spec: #fff;
+$ghost-col: rgba(0,0,0,0.06);

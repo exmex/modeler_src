@@ -1,0 +1,34 @@
+version: '3'
+services:
+  pg13_ssl:
+    image: postgres:13-alpine
+    container_name: pg130_ssl
+    restart: always
+    command: >
+      -c ssl=on 
+      -c ssl_ca_file=/var/lib/postgresql/root.crt
+      -c ssl_cert_file=/var/lib/postgresql/server.crt
+      -c ssl_key_file=/var/lib/postgresql/server.key
+      -c hba_file=/etc/postgres/pg_hba.conf
+    environment:
+      - POSTGRES_PASSWORD=test
+    volumes:
+      - type: bind
+        source: ./docker-compose/ssl-certs/pg/root.crt
+        target: /var/lib/postgresql/root.crt
+      - type: bind
+        source: ./docker-compose/ssl-certs/pg/server.crt
+        target: /var/lib/postgresql/server.crt
+      - type: bind
+        source: ./docker-compose/ssl-certs/pg/server.key
+        target: /var/lib/postgresql/server.key
+      - type: bind
+        source: ./docker-compose/config/pg/pg_hba.conf
+        target: /etc/postgres/pg_hba.conf
+    ports:
+      - 5130:5432
+networks:
+  default:
+    external: 
+      name: testnet
+  

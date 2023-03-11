@@ -1,0 +1,43 @@
+{
+  "name": "re-mongodb",
+  "version": "1.0.0",
+  "description": "MongoDB Reverse Engineering Library for Datensen Modeler",
+  "main": "dist/index",
+  "types": "dist/index",
+  "files": [
+    "dist/**/*"
+  ],
+  "dependencies": {
+    "al": "1.0.0",
+    "bson": "^4.0.4",
+    "common": "1.0.0",
+    "mongodb": "^4.6.0",
+    "re": "1.0.0",
+    "url": "^0.11.0",
+    "uuid": "^8.3.2"
+  },
+  "resolutions": {
+    "al": "link: ../al",
+    "re": "link: ../re",
+    "common": "link: ../common"
+  },
+  "devDependencies": {
+    "@types/expect": "^24.3.0",
+    "@types/lodash": "^4.14.178",
+    "@types/mocha": "^5.2.7",
+    "@types/node": "^12.12.54",
+    "@types/uuid": "^3.4.9",
+    "mocha": "^6.2.3",
+    "nyc": "^14.1.1",
+    "rimraf": "^3.0.2",
+    "ts-mocha": "^7.0.0",
+    "typescript": "^4.6.2",
+    "wsrun": "^5.2.4",
+    "yarn": "^1.22.10"
+  },
+  "author": {
+    "name": "Datensen"
+  },
+  "license": "SEE LICENSE IN LICENSE",
+  "private": true
+}

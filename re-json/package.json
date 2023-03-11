@@ -1,0 +1,30 @@
+{
+  "name": "re-json",
+  "version": "1.0.0",
+  "description": "Reverse Engineering Library for Datensen Modeler",
+  "main": "dist/index",
+  "types": "dist/index",
+  "files": [
+    "dist/**/*"
+  ],
+  "dependencies": {
+    "uuid": "^8.3.2",
+    "re": "1.0.0"
+  },
+  "resolutions": {
+    "re": "link:../re"
+  },
+  "devDependencies": {
+    "@types/node": "^12.12.54",
+    "@types/uuid": "^3.4.9",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.6.2",
+    "wsrun": "^5.2.4",
+    "yarn": "^1.22.10"
+  },
+  "author": {
+    "name": "Datensen"
+  },
+  "license": "SEE LICENSE IN LICENSE",
+  "private": true
+}

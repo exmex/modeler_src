@@ -1,0 +1,227 @@
+/*animation list*/
+.example-enter {
+  max-height: 0;
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+}
+
+.example-enter.example-enter-active {
+  opacity: 1;
+  max-height: 50vh;
+  height: auto;
+  transition: all 300ms ease-in;
+}
+
+.example-exit {
+  opacity: 1;
+  max-height: 50vh;
+}
+
+.example-exit.example-exit-active {
+  max-height: 0;
+  opacity: 0;
+  display: none;
+  transition: all 300ms ease-out;
+}
+
+.example-exit.example-exit-done {
+  display: none;
+}
+
+/**/
+.example2-enter {
+  opacity: 0;
+
+  overflow: hidden;
+}
+
+.example2-enter.example2-enter-active {
+  opacity: 1;
+  transition: all 5000ms ease-in;
+}
+
+.example2-exit {
+  opacity: 1;
+}
+
+.example2-exit.example2-exit-active {
+  opacity: 0.01;
+  transition: all 5000ms ease-out;
+}
+
+/* modal */
+
+.fromright-enter {
+  width: 0vw;
+}
+
+.fromright-enter.fromright-enter-active {
+  width: 50vw;
+  transition: all 300ms ease-out;
+}
+
+.fromright-exit {
+  width: 50vw;
+}
+
+.fromright-exit.fromright-exit-active {
+  width: 0vw;
+  transition: all 300ms ease-out;
+}
+
+/**/
+
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: all 100ms linear;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit.fade-exit-active {
+  opacity: 0;
+  transition: all 100ms linear;
+}
+
+/**/
+
+.fromtop-enter {
+  height: 0vh;
+}
+
+.fromtop-enter.fromtop-enter-active {
+  height: 80vh;
+  transition: all 300ms linear;
+}
+
+.fromtop-exit {
+  height: 80vh;
+}
+
+.fromtop-exit.fromtop-exit-active {
+  height: 0vh;
+  transition: all 300ms linear;
+}
+
+/* GROW */
+
+.grow-enter {
+  transform: scale(0, 0);
+}
+
+.grow-enter.grow-enter-active {
+  transform: scale(1, 1);
+  transition: all 200ms ease-out;
+}
+
+.grow-exit {
+  transform: scale(1, 1);
+}
+
+.grow-exit.grow-exit-active {
+  transform: scale(0, 0);
+  transition: all 100ms ease-out;
+}
+
+/**/
+.relAnim-enter {
+  opacity: 0;
+  stroke-dasharray: 1500;
+  stroke-dashoffset: 1500;
+  overflow: hidden;
+}
+
+.relAnim-enter.relAnim-enter-active {
+  opacity: 1;
+  stroke-dasharray: 1500;
+  stroke-dashoffset: 0;
+  transition: all 500ms ease-in;
+}
+
+.relAnim-exit {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 0;
+  opacity: 1;
+}
+
+.relAnim-exit.relAnim-exit-active {
+  opacity: 0;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 0;
+  transition: all 100ms ease-out;
+}
+
+/**/
+
+.tabHeader-enter {
+  opacity: 0.01;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  overflow: hidden;
+}
+
+.tabHeader-enter.tabHeader-enter-active {
+  opacity: 1;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 0;
+  transition: all 1000ms ease-in;
+}
+
+.tabHeader-leave {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 0;
+  opacity: 1;
+}
+
+.tabHeader-leave.tabHeader-leave-active {
+  opacity: 0.01;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  transition: all 1000ms ease-out;
+}
+
+/**/
+
+.tabAnim-enter div {
+  overflow: hidden;
+}
+
+.tabAnim-enter {
+  /*transform: scale(0,0);  */
+  transform-origin: center center;
+  min-width: 200px;
+  min-height: 100px;
+  top: 0;
+  z-index: 100;
+  animation: growSeq 500ms forwards;
+}
+
+.tabAnim-enter.tabAnim-enter-active {
+  /*transform: scale(1,1);*/
+  top: 0;
+  z-index: 100;
+  /*transition: all 500ms linear;*/
+}
+
+.tabAnim-exit {
+  transform: scale(1, 1);
+  top: 0;
+  min-width: 200px;
+  min-height: 100px;
+  z-index: 100;
+}
+
+.tabAnim-exit.tabAnim-exit-active {
+  transform: scale(0, 0);
+  transform-origin: center center;
+  top: 0;
+  z-index: 100;
+  transition: all 200ms linear;
+}

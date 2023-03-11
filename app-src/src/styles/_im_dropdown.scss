@@ -1,0 +1,122 @@
+.dropdown-area {
+  border-top: 1px solid transparent;
+}
+
+.dropdown-area i {
+  margin-right: 5px;
+}
+
+.im-dropdown {
+  transform-origin: 0% 0%;
+  position: absolute;
+  width: auto;
+  height: auto;
+  display: block;
+  top: 100px;
+  left: 100px;
+  min-width: 150px;
+  background: $dropdown-bg;
+  color: $text-color;
+  box-shadow: $shadow;
+  z-index: 9999;
+  /*animation: im-anim-grow 300ms forwards;*/
+  padding: 5px;
+  border-radius: 2px;
+  user-select: none;
+  -webkit-user-select: none; /* Chrome all / Safari all */
+  -moz-user-select: none; /* Firefox all */
+  -ms-user-select: none; /* IE 10+ */
+}
+
+.im-dropdown ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+.im-dropdown ul li {
+  font-size: 12px;
+  padding: 3px 20px 3px 5px;
+  cursor: pointer;
+  display: flex;
+}
+
+.im-dropdown ul li:hover {
+  color: #fff;
+  background: $link-hover-bg;
+  transition: background-color 0.2s;
+}
+
+.im-dropdown ul li i {
+  color: $text-color;
+}
+
+.im-dropdown ul li:hover i {
+  color: #fff;
+}
+
+.im-dropdown ul li i,
+.im-dropdown ul li div {
+  align-self: center;
+}
+
+.im-dropdown ul li.im-dropdown-separator {
+  height: 1px;
+  max-height: 1px;
+  padding: 0;
+  margin: 2px 0;
+  border-bottom: 1px solid $line-separator;
+}
+
+.im-dropdown ul li.im-dropdown-icon-empty {
+  display: grid;
+  grid-template-columns: 21px 1fr;
+}
+.im-dropdown-submenu {
+  position: relative;
+}
+
+.im-dropdown-submenu ul {
+  display: none;
+  position: relative;
+  transform: scale(0, 0);
+}
+
+.im-dropdown-submenu:hover ul {
+  display: block;
+  top: -4px;
+  position: absolute;
+  width: auto;
+  width: fit-content;
+  white-space: nowrap;
+  background: $dropdown-bg;
+  color: $text-color;
+  box-shadow: $shadow;
+  padding: 5px;
+  border-radius: 2px;
+  transition: opacity 0.2s;
+  transition-delay: 0.1s;
+  transform: scale(1, 1);
+  animation: im-anim-grow 200ms forwards;
+  min-width: 120px;
+}
+
+.im-dropdown-submenu > div::after {
+  font-family: "im-line-icons" !important;
+  content: "\e909";
+  position: absolute;
+  right: 2px;
+  top: 3px;
+  font-size: 12px;
+  
+}
+.im-ul-show-right {
+  transform-origin: 0% 0%;
+  left: 100%;
+}
+
+.im-ul-show-left {
+  transform-origin: 100% 0%;
+  right: 100%;
+}

@@ -1,0 +1,122 @@
+.im-search-bar {
+  height: 20px;
+  display: grid;
+  grid-template-columns: 10px 1fr 24px 10px;
+  grid-template-rows: 1fr;
+  align-content: center;
+  align-items: center;
+  padding-top: 2px;
+  padding-bottom: 2px;
+
+  border-radius: 100px;
+  overflow: hidden;
+
+  border: $search-border;
+
+  margin: 7px 7px;
+
+  background: $search-bg;
+}
+
+.im-search-fixed-width {
+  max-width: 500px;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  top: 10px;
+  z-index: 100;
+}
+
+.im-search-bar input,
+.im-search-bar input:focus,
+.im-search-bar input:hover {
+  display: inline-block;
+  border: 0px;
+}
+
+.im-search-bar input {
+  width: auto;
+  min-width: 40px;
+}
+
+.im-search-bar input::placeholder {
+  color: $search-placeholer;
+  font-style: italic;
+}
+
+.im-search-bar .im-search-button {
+  align-self: center;
+  justify-self: right;
+  width: 24px;
+  text-align: right;
+  cursor: pointer;
+  padding-top: 4px;
+}
+
+.im-search-fixed-width > .im-search-button {
+  padding-top: 0;
+}
+
+.im-find-on-diagram .im-search-bar{
+  grid-template-columns: 10px 1fr 24px auto;
+  position: fixed;
+  top: 80px;
+  box-shadow: 0 0 30px -5px #000;
+}
+
+.im-find-on-diagram .im-search-button {
+  margin-top: 2px;
+}
+
+.im-found-results-details {
+  padding-left: 8px;
+  margin-left: 4px;
+  background: rgba(0,0,0,0.2);
+  border:transparent;
+  height: 24px;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 4px;
+}
+
+
+.im-found-results-details div {
+  display: flex;
+}
+ .im-found-results-details i {
+  align-self: center;
+}
+
+.im-search-results-counts {  
+  color: $icon;
+  font-size: 12px;
+  margin-right: 0px;
+  align-self: center;
+}
+
+.im-search-close {
+  color: $icon;
+  font-size: 12px;
+  margin-right: 8px;
+  margin-left: 4px;
+  padding-bottom: 2px;
+  align-self: center;
+}
+
+.im-found {
+  display: grid;
+  grid-template-columns: auto 20px 20px;
+  grid-column-gap: 4px;
+}
+
+.im-not-found {
+  color: $message-err;
+}
+
+[data-results-decorator] {
+  box-shadow: 0px 0px 0px 2px orange;
+  outline-offset: 3px;  
+}
